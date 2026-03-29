@@ -35,6 +35,18 @@ import img_orchard_bedroom from "@assets/019_pheobe_2550_orchard_avenue_-_9_1774
 import img_orchard_living from "@assets/013_pheobe_2550_orchard_avenue_-_33_0_1774817751821.jpg";
 import img_orchard_bunks from "@assets/016_pheobe_2550_orchard_avenue_-_6_1774817751822.jpg";
 
+import { useState, useEffect } from "react";
+
+const HERO_SLIDES = [
+  { src: img_hero,             label: "Cutter Lane",       focusX: "center" },
+  { src: img_oakpark_living,   label: "Oak Park Drive",    focusX: "center" },
+  { src: img_oakpark_fireplace,label: "Oak Park Drive",    focusX: "center" },
+  { src: img_cutter_kitchen2,  label: "Cutter Lane",       focusX: "center" },
+  { src: img_desoto_living,    label: "De Soto Street",    focusX: "center" },
+];
+
+const SLIDE_DURATION = 15000;
+
 const services = [
   {
     label: "01",
@@ -88,6 +100,19 @@ const projects = [
 ];
 
 export function LandingPage() {
+  const [activeSlide, setActiveSlide] = useState(0);
+  const [prevSlide, setPrevSlide] = useState<number | null>(null);
+
+  useEffect(() => {
+    const timer = setInterval(() => {
+      setActiveSlide(prev => {
+        setPrevSlide(prev);
+        return (prev + 1) % HERO_SLIDES.length;
+      });
+    }, SLIDE_DURATION);
+    return () => clearInterval(timer);
+  }, []);
+
   return (
     <div
       style={{ fontFamily: "'Jost', sans-serif" }}
@@ -116,22 +141,37 @@ export function LandingPage() {
         </div>
       </nav>
 
-      {/* ── Hero ── */}
+      {/* ── Hero Carousel ── */}
       <section className="relative h-screen overflow-hidden">
-        <img
-          src={img_hero}
-          alt="Cutter Lane — grand entry with staircase and chandelier"
-          className="absolute inset-0 w-full h-full object-cover object-center"
-          data-testid="hero-image"
-        />
-        <div className="absolute inset-0"
+        {HERO_SLIDES.map((slide, i) => (
+          <img
+            key={i}
+            src={slide.src}
+            alt={slide.label}
+            data-testid={i === 0 ? "hero-image" : undefined}
+            className="absolute inset-0 w-full h-full object-cover object-center"
+            style={{
+              opacity: i === activeSlide ? 1 : 0,
+              transition: i === activeSlide
+                ? "opacity 1.8s ease-in-out"
+                : i === prevSlide
+                  ? "opacity 1.8s ease-in-out"
+                  : "none",
+              zIndex: i === activeSlide ? 1 : i === prevSlide ? 0 : -1,
+            }}
+          />
+        ))}
+
+        {/* Left dark gradient — always on top of images */}
+        <div className="absolute inset-0 z-10"
           style={{
-            background: "linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.48) 30%, rgba(0,0,0,0.10) 52%, rgba(0,0,0,0.04) 68%, rgba(0,0,0,0.08) 100%)"
+            background: "linear-gradient(to right, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.50) 28%, rgba(0,0,0,0.12) 52%, rgba(0,0,0,0.04) 68%, rgba(0,0,0,0.08) 100%)"
           }}
         />
-        <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/15" />
+        <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/25 via-transparent to-black/20" />
 
-        <div className="absolute inset-y-0 left-0 w-[38%] flex flex-col justify-center px-14 py-20">
+        {/* Hero text */}
+        <div className="absolute inset-y-0 left-0 w-[38%] flex flex-col justify-center px-14 py-20 z-20">
           <h1 className="font-serif-display text-[clamp(3.8rem,5.5vw,6.5rem)] font-medium leading-[1.04] text-white mb-8" data-testid="hero-heading">
             Homes,<br /><em>Completely</em><br />Reimagined
           </h1>
@@ -150,9 +190,38 @@ export function LandingPage() {
           </div>
         </div>
 
-        <div className="absolute bottom-10 right-10">
-          <span className="font-body text-[10px] tracking-[0.25em] uppercase text-white/55">Cutter Lane</span>
+        {/* Bottom bar: project label + dots */}
+        <div className="absolute bottom-8 left-0 right-0 z-20 flex items-center justify-between px-14">
+          <span
+            key={activeSlide}
+            className="font-body text-[10px] tracking-[0.25em] uppercase text-white/60"
+            style={{ animation: "fadeIn 0.6s ease" }}
+          >
+            {HERO_SLIDES[activeSlide].label}
+          </span>
+          <div className="flex items-center gap-2">
+            {HERO_SLIDES.map((_, i) => (
+              <button
+                key={i}
+                onClick={() => { setPrevSlide(activeSlide); setActiveSlide(i); }}
+                className="p-1 group"
+                aria-label={`Go to slide ${i + 1}`}
+              >
+                <span
+                  className="block h-px transition-all duration-500"
+                  style={{
+                    width: i === activeSlide ? "28px" : "12px",
+                    backgroundColor: i === activeSlide ? "rgba(255,255,255,0.9)" : "rgba(255,255,255,0.35)",
+                  }}
+                />
+              </button>
+            ))}
+          </div>
         </div>
+
+        <style>{`
+          @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
+        `}</style>
       </section>
 
       {/* ── Studio Statement ── */}

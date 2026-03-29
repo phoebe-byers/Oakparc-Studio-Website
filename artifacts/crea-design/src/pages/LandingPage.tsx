@@ -135,7 +135,7 @@ export function LandingPage() {
           <h1 className="font-serif-display text-[clamp(3.8rem,5.5vw,6.5rem)] font-medium leading-[1.04] text-white mb-8" data-testid="hero-heading">
             Homes,<br /><em>Completely</em><br />Reimagined
           </h1>
-          <p className="font-body text-[16px] text-white font-normal leading-relaxed mb-10 max-w-xs">
+          <p className="font-body text-[16px] text-white font-light leading-relaxed mb-10 max-w-xs">
             Oakparc Studio is a Park City–based design-build company creating thoughtfully reimagined homes — from first idea to final install — for clients nationwide.
           </p>
           <div className="flex flex-col gap-4">

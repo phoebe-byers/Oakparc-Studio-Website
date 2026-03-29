@@ -300,172 +300,163 @@ export function LandingPage() {
         </div>
       </section>
 
-      {/* ── Project Detail Gallery — Cutter Lane ── */}
-      <section className="px-10 pb-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-8 flex items-baseline gap-6">
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Featured Project</p>
-            <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Cutter Lane</h3>
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            {[
-              { src: img_hero, alt: "Cutter Lane entry staircase" },
-              { src: img_cutter_kitchen, alt: "Cutter Lane kitchen" },
-              { src: img_cutter_kitchen2, alt: "Cutter Lane kitchen vaulted" },
-              { src: img_cutter_dining, alt: "Cutter Lane dining" },
-              { src: img_cutter_pantry, alt: "Cutter Lane pantry" },
-              { src: img_cutter_living2, alt: "Cutter Lane living room" },
-              { src: img_cutter_bath, alt: "Cutter Lane bathroom" },
-              { src: img_cutter_shower, alt: "Cutter Lane shower" },
-              { src: img_cutter_tub, alt: "Cutter Lane soaking tub" },
-            ].map((photo, i) => (
-              <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
-                <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 grid grid-cols-2 gap-16 border-t border-[#d8d1c7] pt-10">
-            <p className="font-serif-display text-[1.15rem] font-light leading-[1.6] text-[#1c1a17]">
+      {/* ── Project Detail Sections ── */}
+      <section className="px-10 pb-24">
+        <div className="max-w-6xl mx-auto space-y-0">
+
+          {/* ── Cutter Lane ── */}
+          <div className="border-t border-[#d8d1c7] pt-14 pb-16">
+            <div className="mb-3 flex items-baseline gap-6">
+              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Park City, UT</p>
+              <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Cutter Lane</h3>
+            </div>
+            <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
               A complete renovation of a 1990s Park City home — cosmetic updates with light structural work — designed to refresh the space and improve everyday flow.
             </p>
-            <ul className="space-y-3">
+            <div className="grid grid-cols-3 gap-2 mb-8">
+              {[
+                { src: img_hero, alt: "Cutter Lane entry staircase" },
+                { src: img_cutter_kitchen, alt: "Cutter Lane kitchen" },
+                { src: img_cutter_kitchen2, alt: "Cutter Lane kitchen vaulted" },
+                { src: img_cutter_dining, alt: "Cutter Lane dining" },
+                { src: img_cutter_pantry, alt: "Cutter Lane pantry" },
+                { src: img_cutter_living2, alt: "Cutter Lane living room" },
+                { src: img_cutter_bath, alt: "Cutter Lane bathroom" },
+                { src: img_cutter_shower, alt: "Cutter Lane shower" },
+                { src: img_cutter_tub, alt: "Cutter Lane soaking tub" },
+              ].map((photo, i) => (
+                <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
+                  <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />
+                </div>
+              ))}
+            </div>
+            <ul className="flex flex-wrap gap-x-10 gap-y-2">
               {["Minor layout adjustments with limited structural changes", "Reworked kitchen layout for better functionality", "Updated bathrooms with new finishes and fixtures", "Added exterior deck and playhouse for expanded outdoor living", "Full selection of finishes and fixtures throughout"].map((item, i) => (
-                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-3">
+                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
                   <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-        </div>
-      </section>
 
-      {/* ── Project Detail Gallery — Oak Park Drive ── */}
-      <section className="px-10 pb-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-8 flex items-baseline gap-6">
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Featured Project</p>
-            <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Oak Park Drive</h3>
-          </div>
-          <div className="grid grid-cols-3 gap-2">
-            {[
-              { src: img_oakpark_living, alt: "Oak Park Drive open plan living" },
-              { src: img_oakpark_fireplace, alt: "Oak Park Drive living room fireplace" },
-              { src: img_oakpark_kitchen, alt: "Oak Park Drive kitchen" },
-              { src: img_oakpark_kitchen2, alt: "Oak Park Drive kitchen detail" },
-              { src: img_oakpark_suite, alt: "Oak Park Drive primary suite" },
-              { src: img_oakpark_bedroom, alt: "Oak Park Drive bedroom" },
-              { src: img_oakpark_den, alt: "Oak Park Drive den" },
-              { src: img_oakpark_entry, alt: "Oak Park Drive entry" },
-              { src: img_oakpark_bath, alt: "Oak Park Drive bathroom" },
-              { src: img_oakpark_shower_penny, alt: "Oak Park Drive penny tile shower" },
-              { src: img_oakpark_shower_rain, alt: "Oak Park Drive rain shower" },
-              { src: img_oakpark_bar, alt: "Oak Park Drive wet bar" },
-            ].map((photo, i) => (
-              <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
-                <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />
-              </div>
-            ))}
-          </div>
-          <div className="mt-10 grid grid-cols-2 gap-16 border-t border-[#d8d1c7] pt-10">
-            <p className="font-serif-display text-[1.15rem] font-light leading-[1.6] text-[#1c1a17]">
+          {/* ── Oak Park Drive ── */}
+          <div className="border-t border-[#d8d1c7] pt-14 pb-16">
+            <div className="mb-3 flex items-baseline gap-6">
+              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">San Francisco, CA</p>
+              <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Oak Park Drive</h3>
+            </div>
+            <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
               A down-to-the-studs renovation of an original 1960s San Francisco home, blending structural improvements with thoughtful design — including a reworked layout, basement expansion, new systems throughout, and full finish and fixture selection.
             </p>
-            <ul className="space-y-3">
+            <div className="grid grid-cols-3 gap-2 mb-8">
+              {[
+                { src: img_oakpark_living, alt: "Oak Park Drive open plan living" },
+                { src: img_oakpark_fireplace, alt: "Oak Park Drive living room fireplace" },
+                { src: img_oakpark_kitchen, alt: "Oak Park Drive kitchen" },
+                { src: img_oakpark_kitchen2, alt: "Oak Park Drive kitchen detail" },
+                { src: img_oakpark_suite, alt: "Oak Park Drive primary suite" },
+                { src: img_oakpark_bedroom, alt: "Oak Park Drive bedroom" },
+                { src: img_oakpark_den, alt: "Oak Park Drive den" },
+                { src: img_oakpark_entry, alt: "Oak Park Drive entry" },
+                { src: img_oakpark_bath, alt: "Oak Park Drive bathroom" },
+                { src: img_oakpark_shower_penny, alt: "Oak Park Drive penny tile shower" },
+                { src: img_oakpark_shower_rain, alt: "Oak Park Drive rain shower" },
+                { src: img_oakpark_bar, alt: "Oak Park Drive wet bar" },
+              ].map((photo, i) => (
+                <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
+                  <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />
+                </div>
+              ))}
+            </div>
+            <ul className="flex flex-wrap gap-x-10 gap-y-2">
               {["Reworked layout with structural wall modifications", "New electrical, plumbing, and windows throughout", "Basement expansion with bedroom, bathroom, and kitchenette", "Added exterior patio for indoor-outdoor living", "Full selection of finishes and fixtures"].map((item, i) => (
-                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-3">
+                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
                   <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-        </div>
-      </section>
 
-      {/* ── Project Detail Gallery — De Soto Street ── */}
-      <section className="px-10 pb-20">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-8 flex items-baseline gap-6">
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Featured Project</p>
-            <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">De Soto Street</h3>
-          </div>
-          <div className="grid grid-cols-3 gap-3">
-            <div className="col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
-              <img src={img_desoto_living} alt="De Soto living room" className="w-full h-full object-cover" />
+          {/* ── De Soto Street ── */}
+          <div className="border-t border-[#d8d1c7] pt-14 pb-16">
+            <div className="mb-3 flex items-baseline gap-6">
+              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Salt Lake City, UT</p>
+              <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">De Soto Street</h3>
             </div>
-            <div className="relative overflow-hidden" style={{ height: "38vh" }}>
-              <img src={img_desoto_entry} alt="De Soto entry" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "28vh" }}>
-              <img src={img_desoto_kitchen} alt="De Soto kitchen" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "28vh" }}>
-              <img src={img_desoto_vanity} alt="De Soto bathroom" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "28vh" }}>
-              <img src={img_desoto_bath} alt="De Soto bath detail" className="w-full h-full object-cover" />
-            </div>
-          </div>
-          <div className="mt-10 grid grid-cols-2 gap-16 border-t border-[#d8d1c7] pt-10">
-            <p className="font-serif-display text-[1.15rem] font-light leading-[1.6] text-[#1c1a17]">
+            <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
               A 1960s Salt Lake City investment property reimagined as a short-term rental, renovated for improved function, durability, and guest experience.
             </p>
-            <ul className="space-y-3">
+            <div className="grid grid-cols-3 gap-3 mb-8">
+              <div className="col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
+                <img src={img_desoto_living} alt="De Soto living room" className="w-full h-full object-cover" />
+              </div>
+              <div className="relative overflow-hidden" style={{ height: "38vh" }}>
+                <img src={img_desoto_entry} alt="De Soto entry" className="w-full h-full object-cover" />
+              </div>
+              <div className="relative overflow-hidden" style={{ height: "28vh" }}>
+                <img src={img_desoto_kitchen} alt="De Soto kitchen" className="w-full h-full object-cover" />
+              </div>
+              <div className="relative overflow-hidden" style={{ height: "28vh" }}>
+                <img src={img_desoto_vanity} alt="De Soto bathroom" className="w-full h-full object-cover" />
+              </div>
+              <div className="relative overflow-hidden" style={{ height: "28vh" }}>
+                <img src={img_desoto_bath} alt="De Soto bath detail" className="w-full h-full object-cover" />
+              </div>
+            </div>
+            <ul className="flex flex-wrap gap-x-10 gap-y-2">
               {["Full cosmetic renovation across both units", "Updated kitchens and bathrooms", "Full selection of finishes and fixtures", "Designed and furnished with STR guests in mind"].map((item, i) => (
-                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-3">
+                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
                   <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
-        </div>
-      </section>
 
-      {/* ── Project Detail Gallery — Orchard Avenue ── */}
-      <section className="px-10 pb-24">
-        <div className="max-w-6xl mx-auto">
-          <div className="mb-8 flex items-baseline gap-6">
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Featured Project</p>
-            <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Orchard Avenue</h3>
-          </div>
-          {/* Row 1: kitchen large + bedroom + bath stacked */}
-          <div className="grid grid-cols-3 gap-3 mb-3">
-            <div className="col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
-              <img src={img_orchard_kitchen} alt="Orchard Avenue kitchen" className="w-full h-full object-cover" />
+          {/* ── Orchard Avenue ── */}
+          <div className="border-t border-[#d8d1c7] pt-14 pb-4">
+            <div className="mb-3 flex items-baseline gap-6">
+              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Ogden, UT</p>
+              <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Orchard Avenue</h3>
             </div>
-            <div className="grid grid-rows-2 gap-3" style={{ height: "38vh" }}>
-              <div className="relative overflow-hidden">
-                <img src={img_orchard_bedroom} alt="Orchard Avenue bedroom" className="w-full h-full object-cover" />
-              </div>
-              <div className="relative overflow-hidden">
-                <img src={img_orchard_bath} alt="Orchard Avenue bathroom" className="w-full h-full object-cover" />
-              </div>
-            </div>
-          </div>
-          {/* Row 2: living room + bunk room */}
-          <div className="grid grid-cols-2 gap-3">
-            <div className="relative overflow-hidden" style={{ height: "30vh" }}>
-              <img src={img_orchard_living} alt="Orchard Avenue living room" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "30vh" }}>
-              <img src={img_orchard_bunks} alt="Orchard Avenue bunk room" className="w-full h-full object-cover" />
-            </div>
-          </div>
-          <div className="mt-10 grid grid-cols-2 gap-16 border-t border-[#d8d1c7] pt-10">
-            <p className="font-serif-display text-[1.15rem] font-light leading-[1.6] text-[#1c1a17]">
+            <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
               A 1950s Ogden investment property reimagined as a short-term rental, with structural and cosmetic updates to improve livability and long-term durability.
             </p>
-            <ul className="space-y-3">
+            <div className="mb-8">
+              <div className="grid grid-cols-3 gap-3 mb-3">
+                <div className="col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
+                  <img src={img_orchard_kitchen} alt="Orchard Avenue kitchen" className="w-full h-full object-cover" />
+                </div>
+                <div className="grid grid-rows-2 gap-3" style={{ height: "38vh" }}>
+                  <div className="relative overflow-hidden">
+                    <img src={img_orchard_bedroom} alt="Orchard Avenue bedroom" className="w-full h-full object-cover" />
+                  </div>
+                  <div className="relative overflow-hidden">
+                    <img src={img_orchard_bath} alt="Orchard Avenue bathroom" className="w-full h-full object-cover" />
+                  </div>
+                </div>
+              </div>
+              <div className="grid grid-cols-2 gap-3">
+                <div className="relative overflow-hidden" style={{ height: "30vh" }}>
+                  <img src={img_orchard_living} alt="Orchard Avenue living room" className="w-full h-full object-cover" />
+                </div>
+                <div className="relative overflow-hidden" style={{ height: "30vh" }}>
+                  <img src={img_orchard_bunks} alt="Orchard Avenue bunk room" className="w-full h-full object-cover" />
+                </div>
+              </div>
+            </div>
+            <ul className="flex flex-wrap gap-x-10 gap-y-2">
               {["Layout improvements to enhance flow and function", "Updated electrical, plumbing, and core systems", "Renovated kitchens and bathrooms throughout", "Full selection of finishes and fixtures", "Designed and furnished with STR guests in mind"].map((item, i) => (
-                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-3">
+                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
                   <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
                   {item}
                 </li>
               ))}
             </ul>
           </div>
+
         </div>
       </section>
 

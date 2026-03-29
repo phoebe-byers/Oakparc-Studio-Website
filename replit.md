@@ -4,6 +4,10 @@
 
 pnpm workspace monorepo using TypeScript. Each package manages its own dependencies.
 
+## Frontend App — Oakparc Studio (artifacts/crea-design)
+
+Luxury interior design studio landing page. Features four projects: Cutter Lane, Oak Park Drive, De Soto Street, and Orchard Avenue. Uses Cormorant Garamond + Jost fonts, real project photography from attached_assets/. Company name: Oakparc Studio.
+
 ## Stack
 
 - **Monorepo tool**: pnpm workspaces

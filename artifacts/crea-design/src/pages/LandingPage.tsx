@@ -1,57 +1,78 @@
-const IMG_BASE = "https://images.unsplash.com";
+import img_hero from "@assets/86-web-or-mls-DSC_4784_(1)_1774817217305.jpg";
 
-const images = {
-  living: `${IMG_BASE}/photo-1616486338812-3dadae4b4ace?w=1600&q=80`,
-  kitchenWide: `${IMG_BASE}/photo-1556909114-f6e7ad7d3136?w=1600&q=80`,
-  kitchenDetail: `${IMG_BASE}/photo-1556909190-eccf4bd3a2dc?w=1200&q=80`,
-  bedroom: `${IMG_BASE}/photo-1522771739844-6a9f6d5f14af?w=1200&q=80`,
-  openplan: `${IMG_BASE}/photo-1600607687939-ce8a6c25118c?w=2000&q=80`,
-  bathWhite: `${IMG_BASE}/photo-1552321554-5fefe8c9ef14?w=1200&q=80`,
-  entry: `${IMG_BASE}/photo-1600585154526-990dced4db0d?w=1200&q=80`,
-  showerPenny: `${IMG_BASE}/photo-1507652313519-d4e9174996dd?w=1200&q=80`,
-  showerRain: `${IMG_BASE}/photo-1603825491103-bd638b1873b4?w=1200&q=80`,
-};
+import img_cutter_living from "@assets/121-web-or-mls-DSC_4964_1774817217308.jpg";
+import img_cutter_kitchen from "@assets/127-web-or-mls-DSC_4994_(1)_1774817217308.jpg";
+import img_cutter_kitchen2 from "@assets/138-web-or-mls-DSC_5054_1774817217309.jpg";
+import img_cutter_dining from "@assets/129-web-or-mls-DSC_5004_1774817217308.jpg";
+import img_cutter_pantry from "@assets/133-web-or-mls-DSC_5024_1774817217309.jpg";
+import img_cutter_living2 from "@assets/119-web-or-mls-DSC_4954_1774817217307.jpg";
+import img_cutter_bath from "@assets/95-web-or-mls-DSC_4829_1774817217306.jpg";
+import img_cutter_shower from "@assets/96-web-or-mls-DSC_4834_1774817217307.jpg";
+import img_cutter_tub from "@assets/99-web-or-mls-DSC_4849_1774817217307.jpg";
+
+import img_oakpark_bar from "@assets/543-Oak-Park-Dr-San-Francisco_(03_of_57)_1774817217309.jpg";
+
+import img_desoto_living from "@assets/012_703_de_soto-4_1774817217303.jpg";
+import img_desoto_entry from "@assets/007_703_de_soto-25_1774817217302.jpg";
+import img_desoto_kitchen from "@assets/024_703_de_soto-21_1774817217305.jpg";
+import img_desoto_bath from "@assets/020_703_de_soto-14_1774817217304.jpg";
+import img_desoto_shower from "@assets/016_703_de_soto-10_1774817217303.jpg";
+import img_desoto_vanity from "@assets/017_703_de_soto-11_1774817217303.jpg";
+
+import img_orchard_kitchen from "@assets/023_pheobe_2550_orchard_avenue_-_13_1774817217305.jpg";
+import img_orchard_bath from "@assets/018_pheobe_2550_orchard_avenue_-_8_1774817217304.jpg";
+import img_orchard_bedroom from "@assets/019_pheobe_2550_orchard_avenue_-_9_1774817217304.jpg";
 
 const services = [
   {
     label: "01",
     heading: "Design That Reworks How You Live",
     body: "We start from scratch on how your home actually functions — reimagining layout, flow, and spatial planning to unlock the full potential of every square foot.",
-    items: [
-      "Layout, flow, and spatial planning",
-      "Structural and cosmetic renovations",
-      "Kitchens, bathrooms, and full-home transformations",
-    ],
+    items: ["Layout, flow, and spatial planning", "Structural and cosmetic renovations", "Kitchens, bathrooms, and full-home transformations"],
   },
   {
     label: "02",
     heading: "Execution That Upgrades the Asset",
     body: "Our team coordinates every trade and detail from foundation to finish — so the home that comes out the other side is more valuable in every sense of the word.",
-    items: [
-      "Systems, infrastructure, and construction coordination",
-      "Finish and fixture selection across the entire project",
-      "Indoor–outdoor living expansion",
-    ],
+    items: ["Systems, infrastructure, and construction coordination", "Finish and fixture selection across the entire project", "Indoor–outdoor living expansion"],
   },
   {
     label: "03",
     heading: "Spaces That Are Fully Realized",
     body: "We don't stop at construction. Every project ends with furnishing, styling, and the final layering that turns a beautiful house into a home you actually love living in.",
-    items: [
-      "Furnishing and styling",
-      "Thoughtfully designed, fully finished spaces",
-      "Lifestyle-driven environments built around how you actually live",
-    ],
+    items: ["Furnishing and styling", "Thoughtfully designed, fully finished spaces", "Lifestyle-driven environments built around how you actually live"],
   },
 ];
 
 const projects = [
-  { img: images.kitchenWide, label: "Park City Mountain Residence", type: "Full-home renovation" },
-  { img: images.bedroom, label: "Deer Valley Retreat", type: "Primary suite & outdoor living" },
-  { img: images.bathWhite, label: "Holladay Residence", type: "Kitchen, bath & interiors" },
-  { img: images.entry, label: "Napa Valley Estate", type: "Full-home transformation" },
-  { img: images.living, label: "San Francisco Residence", type: "Open-plan living & kitchen" },
-  { img: images.showerPenny, label: "Coastal Ranch", type: "Baths & primary suite" },
+  {
+    img: img_cutter_kitchen2,
+    label: "Cutter Lane",
+    type: "Full-home transformation",
+    gallery: [img_cutter_living, img_cutter_kitchen, img_cutter_dining, img_cutter_pantry, img_cutter_living2, img_cutter_bath, img_cutter_shower, img_cutter_tub],
+    featured: true,
+  },
+  {
+    img: img_oakpark_bar,
+    label: "Oak Park Drive",
+    type: "Full-home renovation",
+    gallery: [img_oakpark_bar],
+    featured: true,
+  },
+  {
+    img: img_desoto_living,
+    label: "De Soto Street",
+    type: "Interiors & full renovation",
+    gallery: [img_desoto_entry, img_desoto_kitchen, img_desoto_bath, img_desoto_shower, img_desoto_vanity],
+    featured: false,
+  },
+  {
+    img: img_orchard_kitchen,
+    label: "Orchard Avenue",
+    type: "Kitchen, bath & interiors",
+    gallery: [img_orchard_bath, img_orchard_bedroom],
+    featured: false,
+  },
 ];
 
 export function LandingPage() {
@@ -73,7 +94,7 @@ export function LandingPage() {
           <a href="#services" data-testid="nav-services" className="font-body text-[10px] tracking-[0.25em] uppercase text-white/70 hover:text-white transition-colors">Services</a>
         </div>
         <div className="font-serif-display text-[22px] font-light tracking-widest text-white uppercase" data-testid="brand-name">
-          Crea Design Co
+          Oakparc Studio
         </div>
         <div className="flex items-center gap-10">
           <a href="#studio" data-testid="nav-studio" className="font-body text-[10px] tracking-[0.25em] uppercase text-white/70 hover:text-white transition-colors">Studio</a>
@@ -86,14 +107,14 @@ export function LandingPage() {
       {/* ── Hero ── */}
       <section className="relative h-screen overflow-hidden">
         <img
-          src={images.openplan}
-          alt="Open-plan living — white walls, seating area"
+          src={img_hero}
+          alt="Cutter Lane — grand entry with staircase and chandelier"
           className="absolute inset-0 w-full h-full object-cover object-center"
           data-testid="hero-image"
         />
         <div className="absolute inset-0"
           style={{
-            background: "linear-gradient(to right, rgba(0,0,0,0.82) 0%, rgba(0,0,0,0.52) 30%, rgba(0,0,0,0.12) 52%, rgba(0,0,0,0.04) 68%, rgba(0,0,0,0.08) 100%)"
+            background: "linear-gradient(to right, rgba(0,0,0,0.78) 0%, rgba(0,0,0,0.48) 30%, rgba(0,0,0,0.10) 52%, rgba(0,0,0,0.04) 68%, rgba(0,0,0,0.08) 100%)"
           }}
         />
         <div className="absolute inset-0 bg-gradient-to-b from-black/25 via-transparent to-black/15" />
@@ -103,7 +124,7 @@ export function LandingPage() {
             Homes,<br /><em>Completely</em><br />Reimagined
           </h1>
           <p className="font-body text-[16px] text-white/70 font-light leading-relaxed mb-10 max-w-xs">
-            A Park City–based full-service design studio creating thoughtfully reimagined homes — from first idea to final install — for clients nationwide.
+            A full-service design studio creating thoughtfully reimagined homes — from first idea to final install — for clients nationwide.
           </p>
           <div className="flex flex-col gap-4">
             <a href="#work" data-testid="hero-cta-work" className="font-body text-[10px] tracking-[0.25em] uppercase text-white flex items-center gap-3 group">
@@ -118,7 +139,7 @@ export function LandingPage() {
         </div>
 
         <div className="absolute bottom-10 right-10">
-          <span className="font-body text-[10px] tracking-[0.25em] uppercase text-white/55">San Francisco Residence</span>
+          <span className="font-body text-[10px] tracking-[0.25em] uppercase text-white/55">Cutter Lane</span>
         </div>
       </section>
 
@@ -147,39 +168,130 @@ export function LandingPage() {
             </a>
           </div>
 
-          {/* Row 1: tall left + two stacked right */}
+          {/* Row 1: Cutter Lane large (featured) + Oak Park Drive right */}
           <div className="grid grid-cols-3 gap-4 mb-4">
-            <div className="col-span-2 relative h-[60vh] overflow-hidden group" data-testid={`card-project-0`}>
-              <img src={projects[0].img} alt={projects[0].label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
+            {/* Cutter Lane — featured large */}
+            <div className="col-span-2 relative h-[62vh] overflow-hidden group" data-testid="card-project-cutter-lane">
+              <img
+                src={projects[0].img}
+                alt={projects[0].label}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
                 <p className="font-body text-[10px] tracking-[0.2em] uppercase text-white/70 mb-1">{projects[0].type}</p>
                 <p className="font-serif-display text-xl font-light text-white">{projects[0].label}</p>
               </div>
+              {/* Always-visible label at bottom */}
+              <div className="absolute bottom-6 left-6">
+                <p className="font-body text-[9px] tracking-[0.25em] uppercase text-white/60 mb-0.5">{projects[0].type}</p>
+                <p className="font-serif-display text-[1.1rem] font-light text-white">{projects[0].label}</p>
+              </div>
             </div>
-            <div className="col-span-1 grid grid-rows-2 gap-4">
-              {[projects[1], projects[2]].map((p, i) => (
-                <div key={i} className="relative overflow-hidden group" data-testid={`card-project-${i + 1}`}>
-                  <img src={p.img} alt={p.label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
-                  <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                    <p className="font-body text-[10px] tracking-[0.2em] uppercase text-white/70 mb-1">{p.type}</p>
-                    <p className="font-serif-display text-base font-light text-white">{p.label}</p>
-                  </div>
-                </div>
-              ))}
+
+            {/* Oak Park Drive — featured right */}
+            <div className="col-span-1 relative h-[62vh] overflow-hidden group" data-testid="card-project-oak-park">
+              <img
+                src={projects[1].img}
+                alt={projects[1].label}
+                className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
+              />
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              <div className="absolute bottom-6 left-5">
+                <p className="font-body text-[9px] tracking-[0.25em] uppercase text-white/60 mb-0.5">{projects[1].type}</p>
+                <p className="font-serif-display text-[1.1rem] font-light text-white">{projects[1].label}</p>
+              </div>
             </div>
           </div>
 
-          {/* Row 2: three equal */}
-          <div className="grid grid-cols-3 gap-4">
-            {[projects[3], projects[4], projects[5]].map((p, i) => (
-              <div key={i} className="relative h-[38vh] overflow-hidden group" data-testid={`card-project-${i + 3}`}>
+          {/* Row 2: De Soto and Orchard equal */}
+          <div className="grid grid-cols-2 gap-4">
+            {[projects[2], projects[3]].map((p, i) => (
+              <div key={i} className="relative h-[40vh] overflow-hidden group" data-testid={`card-project-${i + 2}`}>
                 <img src={p.img} alt={p.label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
-                <div className="absolute bottom-0 left-0 right-0 p-4 bg-gradient-to-t from-black/50 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                  <p className="font-body text-[10px] tracking-[0.2em] uppercase text-white/70 mb-1">{p.type}</p>
-                  <p className="font-serif-display text-base font-light text-white">{p.label}</p>
+                <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+                <div className="absolute bottom-5 left-5">
+                  <p className="font-body text-[9px] tracking-[0.25em] uppercase text-white/60 mb-0.5">{p.type}</p>
+                  <p className="font-serif-display text-[1.1rem] font-light text-white">{p.label}</p>
                 </div>
               </div>
             ))}
+          </div>
+        </div>
+      </section>
+
+      {/* ── Project Detail Gallery — Cutter Lane ── */}
+      <section className="px-10 pb-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8 flex items-baseline gap-6">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Featured Project</p>
+            <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Cutter Lane</h3>
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            <div className="col-span-1 row-span-2 relative overflow-hidden" style={{ height: "52vh" }}>
+              <img src={img_cutter_living} alt="Cutter Lane living room" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "25vh" }}>
+              <img src={img_cutter_kitchen} alt="Cutter Lane kitchen" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "25vh" }}>
+              <img src={img_cutter_bath} alt="Cutter Lane bathroom" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "25vh" }}>
+              <img src={img_cutter_dining} alt="Cutter Lane dining" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "25vh" }}>
+              <img src={img_cutter_tub} alt="Cutter Lane primary bath" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Project Detail Gallery — De Soto Street ── */}
+      <section className="px-10 pb-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8 flex items-baseline gap-6">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Featured Project</p>
+            <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">De Soto Street</h3>
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            <div className="col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
+              <img src={img_desoto_living} alt="De Soto living room" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "38vh" }}>
+              <img src={img_desoto_entry} alt="De Soto entry" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "28vh" }}>
+              <img src={img_desoto_kitchen} alt="De Soto kitchen" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "28vh" }}>
+              <img src={img_desoto_vanity} alt="De Soto bathroom" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "28vh" }}>
+              <img src={img_desoto_bath} alt="De Soto bath detail" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Project Detail Gallery — Orchard Avenue ── */}
+      <section className="px-10 pb-24">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8 flex items-baseline gap-6">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Featured Project</p>
+            <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Orchard Avenue</h3>
+          </div>
+          <div className="grid grid-cols-3 gap-3">
+            <div className="col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
+              <img src={img_orchard_kitchen} alt="Orchard Avenue kitchen" className="w-full h-full object-cover" />
+            </div>
+            <div className="grid grid-rows-2 gap-3">
+              <div className="relative overflow-hidden">
+                <img src={img_orchard_bedroom} alt="Orchard Avenue bedroom" className="w-full h-full object-cover" />
+              </div>
+              <div className="relative overflow-hidden">
+                <img src={img_orchard_bath} alt="Orchard Avenue bathroom" className="w-full h-full object-cover" />
+              </div>
+            </div>
           </div>
         </div>
       </section>
@@ -223,7 +335,7 @@ export function LandingPage() {
               Not every project requires on-site presence to be done exceptionally well. Our virtual design program delivers the same thoughtful process — spatial planning, material selection, sourcing, and detailed drawings — through a structured remote collaboration built for clients across the country.
             </p>
             <p className="font-body text-[13px] text-[#b0a08e] font-light leading-relaxed mb-10 max-w-md">
-              Ideal for primary renovations, vacation properties, and clients in markets we don't visit regularly. You get the same quality of thinking. We handle the rest from Park City.
+              Ideal for primary renovations, vacation properties, and clients in markets we don't visit regularly. You get the same quality of thinking. We handle the rest.
             </p>
             <a href="#contact" data-testid="link-virtual-design" className="font-body text-[10px] tracking-[0.25em] uppercase text-white flex items-center gap-3 group w-fit">
               <span className="w-6 h-px bg-white group-hover:w-10 transition-all duration-300" />
@@ -232,8 +344,8 @@ export function LandingPage() {
           </div>
           <div className="w-1/2 relative overflow-hidden" style={{ minHeight: "520px" }}>
             <img
-              src={images.kitchenDetail}
-              alt="Virtual design project kitchen"
+              src={img_cutter_living2}
+              alt="Cutter Lane bright living room"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/10" />
@@ -277,8 +389,8 @@ export function LandingPage() {
       {/* ── Pull quote ── */}
       <section className="relative h-[55vh] overflow-hidden">
         <img
-          src={images.bedroom}
-          alt="Primary suite with deck view"
+          src={img_cutter_kitchen2}
+          alt="Cutter Lane kitchen and dining"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-[#1c1a17]/60" />
@@ -302,7 +414,7 @@ export function LandingPage() {
           We take a limited number of projects each year to give every client and every home our complete attention. In-person and virtual design engagements welcome.
         </p>
         <div className="flex items-center justify-center gap-8">
-          <a href="mailto:hello@creadesignco.com" data-testid="cta-begin" className="font-body text-[10px] tracking-[0.25em] uppercase bg-[#1c1a17] text-white px-10 py-4 hover:bg-[#2e2b27] transition-colors">
+          <a href="mailto:hello@oakparcstudio.com" data-testid="cta-begin" className="font-body text-[10px] tracking-[0.25em] uppercase bg-[#1c1a17] text-white px-10 py-4 hover:bg-[#2e2b27] transition-colors">
             Begin a Conversation
           </a>
           <a href="#services" data-testid="cta-virtual" className="font-body text-[10px] tracking-[0.25em] uppercase text-[#9a8f7e] border border-[#d8d1c7] px-10 py-4 hover:border-[#9a8f7e] transition-colors">
@@ -312,11 +424,11 @@ export function LandingPage() {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="py-14 px-10 bg-[#1c1a17]">
+      <footer id="studio" className="py-14 px-10 bg-[#1c1a17]">
         <div className="max-w-6xl mx-auto flex flex-wrap items-start justify-between gap-10">
           <div>
-            <p className="font-serif-display text-[18px] font-light tracking-widest text-white uppercase mb-2">Crea Design Co</p>
-            <p className="font-body text-[11px] text-white/30 font-light">Park City, Utah — Serving Clients Nationwide</p>
+            <p className="font-serif-display text-[18px] font-light tracking-widest text-white uppercase mb-2">Oakparc Studio</p>
+            <p className="font-body text-[11px] text-white/30 font-light">Serving Clients Nationwide</p>
           </div>
           <div className="grid grid-cols-2 gap-x-16 gap-y-3">
             {["Work", "Services", "Virtual Design", "Studio", "Press", "Contact"].map(link => (
@@ -333,8 +445,7 @@ export function LandingPage() {
           </div>
         </div>
         <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-white/5 flex items-center justify-between">
-          <p className="font-body text-[10px] text-white/20 font-light">© 2026 Crea Design Co. All rights reserved.</p>
-          <p className="font-body text-[10px] text-white/20 font-light">Park City, Utah</p>
+          <p className="font-body text-[10px] text-white/20 font-light">© 2026 Oakparc Studio. All rights reserved.</p>
         </div>
       </footer>
     </div>

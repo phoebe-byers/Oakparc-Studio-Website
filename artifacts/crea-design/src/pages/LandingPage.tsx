@@ -238,22 +238,22 @@ export function LandingPage() {
             <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Featured Project</p>
             <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Cutter Lane</h3>
           </div>
-          <div className="grid grid-cols-3 gap-3">
-            <div className="col-span-1 row-span-2 relative overflow-hidden" style={{ height: "52vh" }}>
-              <img src={img_cutter_kitchen} alt="Cutter Lane kitchen" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "25vh" }}>
-              <img src={img_cutter_kitchen2} alt="Cutter Lane kitchen vaulted" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "25vh" }}>
-              <img src={img_cutter_bath} alt="Cutter Lane bathroom" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "25vh" }}>
-              <img src={img_cutter_dining} alt="Cutter Lane dining" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "25vh" }}>
-              <img src={img_cutter_tub} alt="Cutter Lane primary bath" className="w-full h-full object-cover" />
-            </div>
+          <div className="grid grid-cols-3 gap-2">
+            {[
+              { src: img_hero, alt: "Cutter Lane entry staircase" },
+              { src: img_cutter_kitchen, alt: "Cutter Lane kitchen" },
+              { src: img_cutter_kitchen2, alt: "Cutter Lane kitchen vaulted" },
+              { src: img_cutter_dining, alt: "Cutter Lane dining" },
+              { src: img_cutter_pantry, alt: "Cutter Lane pantry" },
+              { src: img_cutter_living2, alt: "Cutter Lane living room" },
+              { src: img_cutter_bath, alt: "Cutter Lane bathroom" },
+              { src: img_cutter_shower, alt: "Cutter Lane shower" },
+              { src: img_cutter_tub, alt: "Cutter Lane soaking tub" },
+            ].map((photo, i) => (
+              <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
+                <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />
+              </div>
+            ))}
           </div>
           <div className="mt-10 grid grid-cols-2 gap-16 border-t border-[#d8d1c7] pt-10">
             <p className="font-serif-display text-[1.15rem] font-light leading-[1.6] text-[#1c1a17]">
@@ -278,38 +278,25 @@ export function LandingPage() {
             <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Featured Project</p>
             <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Oak Park Drive</h3>
           </div>
-          {/* Row 1: fireplace living + kitchen */}
-          <div className="grid grid-cols-3 gap-3 mb-3">
-            <div className="col-span-2 relative overflow-hidden" style={{ height: "42vh" }}>
-              <img src={img_oakpark_fireplace} alt="Oak Park Drive living room with fireplace" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "42vh" }}>
-              <img src={img_oakpark_kitchen} alt="Oak Park Drive kitchen" className="w-full h-full object-cover" />
-            </div>
-          </div>
-          {/* Row 2: suite + kitchen detail + den */}
-          <div className="grid grid-cols-3 gap-3 mb-3">
-            <div className="relative overflow-hidden" style={{ height: "30vh" }}>
-              <img src={img_oakpark_suite} alt="Oak Park Drive primary suite" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "30vh" }}>
-              <img src={img_oakpark_kitchen2} alt="Oak Park Drive kitchen detail" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "30vh" }}>
-              <img src={img_oakpark_bedroom} alt="Oak Park Drive bedroom" className="w-full h-full object-cover" />
-            </div>
-          </div>
-          {/* Row 3: entry + bath + shower */}
-          <div className="grid grid-cols-3 gap-3">
-            <div className="relative overflow-hidden" style={{ height: "26vh" }}>
-              <img src={img_oakpark_entry} alt="Oak Park Drive entry" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "26vh" }}>
-              <img src={img_oakpark_bath} alt="Oak Park Drive bathroom" className="w-full h-full object-cover" />
-            </div>
-            <div className="relative overflow-hidden" style={{ height: "26vh" }}>
-              <img src={img_oakpark_shower_penny} alt="Oak Park Drive shower" className="w-full h-full object-cover" />
-            </div>
+          <div className="grid grid-cols-3 gap-2">
+            {[
+              { src: img_oakpark_living, alt: "Oak Park Drive open plan living" },
+              { src: img_oakpark_fireplace, alt: "Oak Park Drive living room fireplace" },
+              { src: img_oakpark_kitchen, alt: "Oak Park Drive kitchen" },
+              { src: img_oakpark_kitchen2, alt: "Oak Park Drive kitchen detail" },
+              { src: img_oakpark_suite, alt: "Oak Park Drive primary suite" },
+              { src: img_oakpark_bedroom, alt: "Oak Park Drive bedroom" },
+              { src: img_oakpark_den, alt: "Oak Park Drive den" },
+              { src: img_oakpark_entry, alt: "Oak Park Drive entry" },
+              { src: img_oakpark_bath, alt: "Oak Park Drive bathroom" },
+              { src: img_oakpark_shower_penny, alt: "Oak Park Drive penny tile shower" },
+              { src: img_oakpark_shower_rain, alt: "Oak Park Drive rain shower" },
+              { src: img_oakpark_bar, alt: "Oak Park Drive wet bar" },
+            ].map((photo, i) => (
+              <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
+                <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />
+              </div>
+            ))}
           </div>
           <div className="mt-10 grid grid-cols-2 gap-16 border-t border-[#d8d1c7] pt-10">
             <p className="font-serif-display text-[1.15rem] font-light leading-[1.6] text-[#1c1a17]">

@@ -102,15 +102,15 @@ export function LandingPage() {
       {/* ── Nav ─────────────────────────────────────── */}
       <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-6">
         <div className="flex items-center gap-10">
-          <a href="#work" data-testid="nav-work" className="font-body text-[10px] tracking-[0.25em] uppercase text-white/70 hover:text-white transition-colors">Work</a>
-          <a href="#services" data-testid="nav-services" className="font-body text-[10px] tracking-[0.25em] uppercase text-white/70 hover:text-white transition-colors">Services</a>
+          <a href="#work" data-testid="nav-work" className="font-body text-[10px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Work</a>
+          <a href="#services" data-testid="nav-services" className="font-body text-[10px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Services</a>
         </div>
         <div className="font-serif-display text-[22px] font-light tracking-widest text-white uppercase" data-testid="brand-name">
           Oakparc Studio
         </div>
         <div className="flex items-center gap-10">
-          <a href="#studio" data-testid="nav-studio" className="font-body text-[10px] tracking-[0.25em] uppercase text-white/70 hover:text-white transition-colors">Studio</a>
-          <a href="#contact" data-testid="nav-start-project" className="font-body text-[10px] tracking-[0.25em] uppercase text-white border-b border-white/40 pb-px hover:text-white hover:border-white transition-colors">
+          <a href="#studio" data-testid="nav-studio" className="font-body text-[10px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Studio</a>
+          <a href="#contact" data-testid="nav-start-project" className="font-body text-[10px] tracking-[0.25em] uppercase text-white border-b border-white pb-px hover:text-white/70 hover:border-white/70 transition-colors">
             Start a Project
           </a>
         </div>

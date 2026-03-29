@@ -255,6 +255,19 @@ export function LandingPage() {
               <img src={img_cutter_tub} alt="Cutter Lane primary bath" className="w-full h-full object-cover" />
             </div>
           </div>
+          <div className="mt-10 grid grid-cols-2 gap-16 border-t border-[#d8d1c7] pt-10">
+            <p className="font-serif-display text-[1.15rem] font-light leading-[1.6] text-[#1c1a17]">
+              A complete renovation of a 1990s Park City home — cosmetic updates with light structural work — designed to refresh the space and improve everyday flow.
+            </p>
+            <ul className="space-y-3">
+              {["Minor layout adjustments with limited structural changes", "Reworked kitchen layout for better functionality", "Updated bathrooms with new finishes and fixtures", "Added exterior deck and playhouse for expanded outdoor living", "Full selection of finishes and fixtures throughout"].map((item, i) => (
+                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-3">
+                  <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -298,6 +311,19 @@ export function LandingPage() {
               <img src={img_oakpark_shower_penny} alt="Oak Park Drive shower" className="w-full h-full object-cover" />
             </div>
           </div>
+          <div className="mt-10 grid grid-cols-2 gap-16 border-t border-[#d8d1c7] pt-10">
+            <p className="font-serif-display text-[1.15rem] font-light leading-[1.6] text-[#1c1a17]">
+              A down-to-the-studs renovation of an original 1960s San Francisco home, blending structural improvements with thoughtful design — including a reworked layout, basement expansion, new systems throughout, and full finish and fixture selection.
+            </p>
+            <ul className="space-y-3">
+              {["Reworked layout with structural wall modifications", "New electrical, plumbing, and windows throughout", "Basement expansion with bedroom, bathroom, and kitchenette", "Added exterior patio for indoor-outdoor living", "Full selection of finishes and fixtures"].map((item, i) => (
+                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-3">
+                  <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
         </div>
       </section>
 
@@ -324,6 +350,19 @@ export function LandingPage() {
             <div className="relative overflow-hidden" style={{ height: "28vh" }}>
               <img src={img_desoto_bath} alt="De Soto bath detail" className="w-full h-full object-cover" />
             </div>
+          </div>
+          <div className="mt-10 grid grid-cols-2 gap-16 border-t border-[#d8d1c7] pt-10">
+            <p className="font-serif-display text-[1.15rem] font-light leading-[1.6] text-[#1c1a17]">
+              A 1960s Salt Lake City investment property reimagined as a short-term rental, renovated for improved function, durability, and guest experience.
+            </p>
+            <ul className="space-y-3">
+              {["Full cosmetic renovation across both units", "Updated kitchens and bathrooms", "Full selection of finishes and fixtures", "Designed and furnished with STR guests in mind"].map((item, i) => (
+                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-3">
+                  <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>
@@ -357,6 +396,19 @@ export function LandingPage() {
             <div className="relative overflow-hidden" style={{ height: "30vh" }}>
               <img src={img_orchard_bunks} alt="Orchard Avenue bunk room" className="w-full h-full object-cover" />
             </div>
+          </div>
+          <div className="mt-10 grid grid-cols-2 gap-16 border-t border-[#d8d1c7] pt-10">
+            <p className="font-serif-display text-[1.15rem] font-light leading-[1.6] text-[#1c1a17]">
+              A 1950s Ogden investment property reimagined as a short-term rental, with structural and cosmetic updates to improve livability and long-term durability.
+            </p>
+            <ul className="space-y-3">
+              {["Layout improvements to enhance flow and function", "Updated electrical, plumbing, and core systems", "Renovated kitchens and bathrooms throughout", "Full selection of finishes and fixtures", "Designed and furnished with STR guests in mind"].map((item, i) => (
+                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-3">
+                  <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
           </div>
         </div>
       </section>

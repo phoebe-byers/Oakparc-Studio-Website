@@ -33,6 +33,8 @@ import img_desoto_vanity from "@assets/017_703_de_soto-11_1774817217303.jpg";
 import img_orchard_kitchen from "@assets/023_pheobe_2550_orchard_avenue_-_13_1774817217305.jpg";
 import img_orchard_bath from "@assets/018_pheobe_2550_orchard_avenue_-_8_1774817217304.jpg";
 import img_orchard_bedroom from "@assets/019_pheobe_2550_orchard_avenue_-_9_1774817217304.jpg";
+import img_orchard_living from "@assets/013_pheobe_2550_orchard_avenue_-_33_0_1774817751821.jpg";
+import img_orchard_bunks from "@assets/016_pheobe_2550_orchard_avenue_-_6_1774817751822.jpg";
 
 const services = [
   {
@@ -334,17 +336,27 @@ export function LandingPage() {
             <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Featured Project</p>
             <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Orchard Avenue</h3>
           </div>
-          <div className="grid grid-cols-3 gap-3">
+          {/* Row 1: kitchen large + bedroom + bath stacked */}
+          <div className="grid grid-cols-3 gap-3 mb-3">
             <div className="col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
               <img src={img_orchard_kitchen} alt="Orchard Avenue kitchen" className="w-full h-full object-cover" />
             </div>
-            <div className="grid grid-rows-2 gap-3">
+            <div className="grid grid-rows-2 gap-3" style={{ height: "38vh" }}>
               <div className="relative overflow-hidden">
                 <img src={img_orchard_bedroom} alt="Orchard Avenue bedroom" className="w-full h-full object-cover" />
               </div>
               <div className="relative overflow-hidden">
                 <img src={img_orchard_bath} alt="Orchard Avenue bathroom" className="w-full h-full object-cover" />
               </div>
+            </div>
+          </div>
+          {/* Row 2: living room + bunk room */}
+          <div className="grid grid-cols-2 gap-3">
+            <div className="relative overflow-hidden" style={{ height: "30vh" }}>
+              <img src={img_orchard_living} alt="Orchard Avenue living room" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "30vh" }}>
+              <img src={img_orchard_bunks} alt="Orchard Avenue bunk room" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

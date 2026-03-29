@@ -11,6 +11,17 @@ import img_cutter_shower from "@assets/96-web-or-mls-DSC_4834_1774817217307.jpg"
 import img_cutter_tub from "@assets/99-web-or-mls-DSC_4849_1774817217307.jpg";
 
 import img_oakpark_bar from "@assets/543-Oak-Park-Dr-San-Francisco_(03_of_57)_1774817217309.jpg";
+import img_oakpark_living from "@assets/543-Oak-Park-Dr-San-Francisco_(13_of_57)_1774817570145.jpg";
+import img_oakpark_fireplace from "@assets/543-Oak-Park-Dr-San-Francisco_(20_of_57)_1774817570146.jpg";
+import img_oakpark_kitchen from "@assets/543-Oak-Park-Dr-San-Francisco_(17_of_57)_1774817570145.jpg";
+import img_oakpark_kitchen2 from "@assets/543-Oak-Park-Dr-San-Francisco_(18_of_57)_1774817570145.jpg";
+import img_oakpark_suite from "@assets/543-Oak-Park-Dr-San-Francisco_(11_of_57)_1774817570144.jpg";
+import img_oakpark_bedroom from "@assets/543-Oak-Park-Dr-San-Francisco_(05_of_57)_1774817570143.jpg";
+import img_oakpark_den from "@assets/543-Oak-Park-Dr-San-Francisco_(07_of_57)_1774817570144.jpg";
+import img_oakpark_shower_penny from "@assets/543-Oak-Park-Dr-San-Francisco_(09_of_57)_1774817570144.jpg";
+import img_oakpark_bath from "@assets/543-Oak-Park-Dr-San-Francisco_(25_of_57)_1774817570146.jpg";
+import img_oakpark_entry from "@assets/543-Oak-Park-Dr-San-Francisco_(29_of_57)_1774817570147.jpg";
+import img_oakpark_shower_rain from "@assets/543-Oak-Park-Dr-San-Francisco_(35_of_57)_1774817570147.jpg";
 
 import img_desoto_living from "@assets/012_703_de_soto-4_1774817217303.jpg";
 import img_desoto_entry from "@assets/007_703_de_soto-25_1774817217302.jpg";
@@ -53,10 +64,10 @@ const projects = [
     featured: true,
   },
   {
-    img: img_oakpark_bar,
+    img: img_oakpark_living,
     label: "Oak Park Drive",
     type: "Full-home renovation",
-    gallery: [img_oakpark_bar],
+    gallery: [img_oakpark_fireplace, img_oakpark_kitchen, img_oakpark_kitchen2, img_oakpark_suite, img_oakpark_bedroom, img_oakpark_den, img_oakpark_shower_penny, img_oakpark_bath, img_oakpark_entry, img_oakpark_shower_rain, img_oakpark_bar],
     featured: true,
   },
   {
@@ -241,6 +252,49 @@ export function LandingPage() {
             </div>
             <div className="relative overflow-hidden" style={{ height: "25vh" }}>
               <img src={img_cutter_tub} alt="Cutter Lane primary bath" className="w-full h-full object-cover" />
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* ── Project Detail Gallery — Oak Park Drive ── */}
+      <section className="px-10 pb-20">
+        <div className="max-w-6xl mx-auto">
+          <div className="mb-8 flex items-baseline gap-6">
+            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Featured Project</p>
+            <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Oak Park Drive</h3>
+          </div>
+          {/* Row 1: fireplace living + kitchen */}
+          <div className="grid grid-cols-3 gap-3 mb-3">
+            <div className="col-span-2 relative overflow-hidden" style={{ height: "42vh" }}>
+              <img src={img_oakpark_fireplace} alt="Oak Park Drive living room with fireplace" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "42vh" }}>
+              <img src={img_oakpark_kitchen} alt="Oak Park Drive kitchen" className="w-full h-full object-cover" />
+            </div>
+          </div>
+          {/* Row 2: suite + kitchen detail + den */}
+          <div className="grid grid-cols-3 gap-3 mb-3">
+            <div className="relative overflow-hidden" style={{ height: "30vh" }}>
+              <img src={img_oakpark_suite} alt="Oak Park Drive primary suite" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "30vh" }}>
+              <img src={img_oakpark_kitchen2} alt="Oak Park Drive kitchen detail" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "30vh" }}>
+              <img src={img_oakpark_bedroom} alt="Oak Park Drive bedroom" className="w-full h-full object-cover" />
+            </div>
+          </div>
+          {/* Row 3: entry + bath + shower */}
+          <div className="grid grid-cols-3 gap-3">
+            <div className="relative overflow-hidden" style={{ height: "26vh" }}>
+              <img src={img_oakpark_entry} alt="Oak Park Drive entry" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "26vh" }}>
+              <img src={img_oakpark_bath} alt="Oak Park Drive bathroom" className="w-full h-full object-cover" />
+            </div>
+            <div className="relative overflow-hidden" style={{ height: "26vh" }}>
+              <img src={img_oakpark_shower_penny} alt="Oak Park Drive shower" className="w-full h-full object-cover" />
             </div>
           </div>
         </div>

@@ -136,7 +136,7 @@ export function LandingPage() {
             Homes,<br /><em>Completely</em><br />Reimagined
           </h1>
           <p className="font-body text-[16px] text-white/70 font-light leading-relaxed mb-10 max-w-xs">
-            A full-service design studio creating thoughtfully reimagined homes — from first idea to final install — for clients nationwide.
+            Oakparc Studio is a Park City–based design-build company creating thoughtfully reimagined homes — from first idea to final install — for clients nationwide.
           </p>
           <div className="flex flex-col gap-4">
             <a href="#work" data-testid="hero-cta-work" className="font-body text-[10px] tracking-[0.25em] uppercase text-white flex items-center gap-3 group">

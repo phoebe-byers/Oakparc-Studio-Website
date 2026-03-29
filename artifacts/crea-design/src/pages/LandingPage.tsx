@@ -1,6 +1,5 @@
 import img_hero from "@assets/86-web-or-mls-DSC_4784_(1)_1774817217305.jpg";
 
-import img_cutter_living from "@assets/121-web-or-mls-DSC_4964_1774817217308.jpg";
 import img_cutter_kitchen from "@assets/127-web-or-mls-DSC_4994_(1)_1774817217308.jpg";
 import img_cutter_kitchen2 from "@assets/138-web-or-mls-DSC_5054_1774817217309.jpg";
 import img_cutter_dining from "@assets/129-web-or-mls-DSC_5004_1774817217308.jpg";
@@ -62,7 +61,7 @@ const projects = [
     img: img_cutter_kitchen2,
     label: "Cutter Lane",
     type: "Full-home transformation",
-    gallery: [img_cutter_living, img_cutter_kitchen, img_cutter_dining, img_cutter_pantry, img_cutter_living2, img_cutter_bath, img_cutter_shower, img_cutter_tub],
+    gallery: [img_cutter_kitchen, img_cutter_dining, img_cutter_pantry, img_cutter_living2, img_cutter_bath, img_cutter_shower, img_cutter_tub],
     featured: true,
   },
   {
@@ -241,10 +240,10 @@ export function LandingPage() {
           </div>
           <div className="grid grid-cols-3 gap-3">
             <div className="col-span-1 row-span-2 relative overflow-hidden" style={{ height: "52vh" }}>
-              <img src={img_cutter_living} alt="Cutter Lane living room" className="w-full h-full object-cover" />
+              <img src={img_cutter_kitchen} alt="Cutter Lane kitchen" className="w-full h-full object-cover" />
             </div>
             <div className="relative overflow-hidden" style={{ height: "25vh" }}>
-              <img src={img_cutter_kitchen} alt="Cutter Lane kitchen" className="w-full h-full object-cover" />
+              <img src={img_cutter_kitchen2} alt="Cutter Lane kitchen vaulted" className="w-full h-full object-cover" />
             </div>
             <div className="relative overflow-hidden" style={{ height: "25vh" }}>
               <img src={img_cutter_bath} alt="Cutter Lane bathroom" className="w-full h-full object-cover" />

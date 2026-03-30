@@ -3,6 +3,8 @@ import img_hero from "@assets/86-web-or-mls-DSC_4784_(1)_1774817217305.jpg";
 import img_cutter_kitchen from "@assets/196-web-or-mls-DSC_5019_(2)_(1)_1774892722083.jpg";
 import img_cutter_kitchen2 from "@assets/138-web-or-mls-DSC_5054_1774817217309.jpg";
 import img_cutter_kitchen3 from "@assets/135-web-or-mls-DSC_5039_1774892722082.jpg";
+import img_cutter_kitchen4 from "@assets/127-web-or-mls-DSC_4994_(2)_1774895635663.jpg";
+import img_cutter_kitchen5 from "@assets/128-web-or-mls-DSC_4999_1774895635665.jpg";
 import img_cutter_bedroom from "@assets/113-web-or-mls-DSC_4924_(1)_1774892722081.jpg";
 import img_cutter_bath2 from "@assets/116-web-or-mls-DSC_4939_1774892722082.jpg";
 import img_cutter_dining from "@assets/129-web-or-mls-DSC_5004_1774817217308.jpg";
@@ -326,6 +328,8 @@ export function LandingPage() {
               {[
                 { src: img_hero,           alt: "Cutter Lane entry staircase" },
                 { src: img_cutter_kitchen, alt: "Cutter Lane kitchen with navy island" },
+                { src: img_cutter_kitchen4,alt: "Cutter Lane kitchen and dining overview" },
+                { src: img_cutter_kitchen5,alt: "Cutter Lane kitchen island and dining nook" },
                 { src: img_cutter_kitchen3,alt: "Cutter Lane kitchen backsplash detail" },
                 { src: img_cutter_kitchen2,alt: "Cutter Lane kitchen vaulted" },
                 { src: img_cutter_dining,  alt: "Cutter Lane dining" },

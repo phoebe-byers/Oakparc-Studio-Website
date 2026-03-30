@@ -32,6 +32,10 @@ import img_desoto_kitchen from "@assets/024_703_de_soto-21_1774817217305.jpg";
 import img_desoto_bath from "@assets/020_703_de_soto-14_1774817217304.jpg";
 import img_desoto_shower from "@assets/016_703_de_soto-10_1774817217303.jpg";
 import img_desoto_vanity from "@assets/017_703_de_soto-11_1774817217303.jpg";
+import img_desoto_shower2 from "@assets/016_703_de_soto-10_(1)_1774893379243.jpg";
+import img_desoto_kitchen2 from "@assets/034_703_de_soto-33_1774893379244.jpg";
+import img_desoto_dining from "@assets/040_703_de_soto-41_1774893379244.jpg";
+import img_desoto_bath2 from "@assets/041_703_de_soto-42_1774893379245.jpg";
 
 import img_orchard_kitchen from "@assets/023_pheobe_2550_orchard_avenue_-_13_1774817217305.jpg";
 import img_orchard_bath from "@assets/018_pheobe_2550_orchard_avenue_-_8_1774817217304.jpg";
@@ -396,20 +400,32 @@ export function LandingPage() {
               A 1960s Salt Lake City investment property reimagined as a short-term rental, renovated for improved function, durability, and guest experience.
             </p>
             <div className="grid grid-cols-3 gap-3 mb-8">
+              {/* Row 1 */}
               <div className="col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
                 <img src={img_desoto_living} alt="De Soto living room" className="w-full h-full object-cover" />
               </div>
               <div className="relative overflow-hidden" style={{ height: "38vh" }}>
+                <img src={img_desoto_dining} alt="De Soto dining and kitchen" className="w-full h-full object-cover" />
+              </div>
+              {/* Row 2 */}
+              <div className="relative overflow-hidden" style={{ height: "28vh" }}>
+                <img src={img_desoto_kitchen2} alt="De Soto kitchen with black tile" className="w-full h-full object-cover" />
+              </div>
+              <div className="relative overflow-hidden" style={{ height: "28vh" }}>
+                <img src={img_desoto_kitchen} alt="De Soto kitchen detail" className="w-full h-full object-cover" />
+              </div>
+              <div className="relative overflow-hidden" style={{ height: "28vh" }}>
                 <img src={img_desoto_entry} alt="De Soto entry" className="w-full h-full object-cover" />
               </div>
+              {/* Row 3 */}
               <div className="relative overflow-hidden" style={{ height: "28vh" }}>
-                <img src={img_desoto_kitchen} alt="De Soto kitchen" className="w-full h-full object-cover" />
+                <img src={img_desoto_shower2} alt="De Soto hex tile shower" className="w-full h-full object-cover" />
               </div>
               <div className="relative overflow-hidden" style={{ height: "28vh" }}>
-                <img src={img_desoto_vanity} alt="De Soto bathroom" className="w-full h-full object-cover" />
+                <img src={img_desoto_vanity} alt="De Soto bathroom vanity" className="w-full h-full object-cover" />
               </div>
               <div className="relative overflow-hidden" style={{ height: "28vh" }}>
-                <img src={img_desoto_bath} alt="De Soto bath detail" className="w-full h-full object-cover" />
+                <img src={img_desoto_bath2} alt="De Soto dark tile shower" className="w-full h-full object-cover" />
               </div>
             </div>
             <ul className="grid grid-cols-3 gap-x-10 gap-y-3">

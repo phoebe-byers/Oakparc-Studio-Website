@@ -323,7 +323,6 @@ export function LandingPage() {
                 { src: img_cutter_kitchen3,alt: "Cutter Lane kitchen backsplash detail" },
                 { src: img_cutter_kitchen2,alt: "Cutter Lane kitchen vaulted" },
                 { src: img_cutter_dining,  alt: "Cutter Lane dining" },
-                { src: img_cutter_living2, alt: "Cutter Lane living room" },
                 { src: img_cutter_bedroom, alt: "Cutter Lane bedroom" },
                 { src: img_cutter_bath2,   alt: "Cutter Lane bathroom" },
                 { src: img_cutter_bath,    alt: "Cutter Lane primary bathroom" },

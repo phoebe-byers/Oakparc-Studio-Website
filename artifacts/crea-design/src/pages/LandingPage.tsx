@@ -11,6 +11,7 @@ import img_cutter_dining from "@assets/129-web-or-mls-DSC_5004_1774817217308.jpg
 import img_cutter_pantry from "@assets/133-web-or-mls-DSC_5024_1774817217309.jpg";
 import img_cutter_living2 from "@assets/119-web-or-mls-DSC_4954_1774817217307.jpg";
 import img_cutter_living3 from "@assets/120-web-or-mls-DSC_4959_1774892936178.jpg";
+import img_virtual_design from "@assets/543-Oak-Park-Dr-San-Francisco_(03_of_57)_(1)_1774895675259.jpg";
 import img_cutter_bath from "@assets/95-web-or-mls-DSC_4829_1774817217306.jpg";
 import img_cutter_shower from "@assets/96-web-or-mls-DSC_4834_1774817217307.jpg";
 import img_cutter_tub from "@assets/99-web-or-mls-DSC_4849_1774817217307.jpg";
@@ -536,8 +537,8 @@ export function LandingPage() {
           </div>
           <div className="w-1/2 relative overflow-hidden" style={{ minHeight: "520px" }}>
             <img
-              src={img_cutter_living2}
-              alt="Cutter Lane bright living room"
+              src={img_virtual_design}
+              alt="Oak Park Drive wet bar and entry"
               className="w-full h-full object-cover"
             />
             <div className="absolute inset-0 bg-black/10" />

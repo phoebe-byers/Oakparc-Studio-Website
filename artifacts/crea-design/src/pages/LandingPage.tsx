@@ -1,7 +1,10 @@
 import img_hero from "@assets/86-web-or-mls-DSC_4784_(1)_1774817217305.jpg";
 
-import img_cutter_kitchen from "@assets/127-web-or-mls-DSC_4994_(1)_1774817217308.jpg";
+import img_cutter_kitchen from "@assets/196-web-or-mls-DSC_5019_(2)_(1)_1774892722083.jpg";
 import img_cutter_kitchen2 from "@assets/138-web-or-mls-DSC_5054_1774817217309.jpg";
+import img_cutter_kitchen3 from "@assets/135-web-or-mls-DSC_5039_1774892722082.jpg";
+import img_cutter_bedroom from "@assets/113-web-or-mls-DSC_4924_(1)_1774892722081.jpg";
+import img_cutter_bath2 from "@assets/116-web-or-mls-DSC_4939_1774892722082.jpg";
 import img_cutter_dining from "@assets/129-web-or-mls-DSC_5004_1774817217308.jpg";
 import img_cutter_pantry from "@assets/133-web-or-mls-DSC_5024_1774817217309.jpg";
 import img_cutter_living2 from "@assets/119-web-or-mls-DSC_4954_1774817217307.jpg";
@@ -315,15 +318,18 @@ export function LandingPage() {
             </p>
             <div className="grid grid-cols-3 gap-2 mb-8">
               {[
-                { src: img_hero, alt: "Cutter Lane entry staircase" },
-                { src: img_cutter_kitchen, alt: "Cutter Lane kitchen" },
-                { src: img_cutter_kitchen2, alt: "Cutter Lane kitchen vaulted" },
-                { src: img_cutter_dining, alt: "Cutter Lane dining" },
-                { src: img_cutter_pantry, alt: "Cutter Lane pantry" },
+                { src: img_hero,           alt: "Cutter Lane entry staircase" },
+                { src: img_cutter_kitchen, alt: "Cutter Lane kitchen with navy island" },
+                { src: img_cutter_kitchen3,alt: "Cutter Lane kitchen backsplash detail" },
+                { src: img_cutter_kitchen2,alt: "Cutter Lane kitchen vaulted" },
+                { src: img_cutter_dining,  alt: "Cutter Lane dining" },
                 { src: img_cutter_living2, alt: "Cutter Lane living room" },
-                { src: img_cutter_bath, alt: "Cutter Lane bathroom" },
-                { src: img_cutter_shower, alt: "Cutter Lane shower" },
-                { src: img_cutter_tub, alt: "Cutter Lane soaking tub" },
+                { src: img_cutter_bedroom, alt: "Cutter Lane bedroom" },
+                { src: img_cutter_bath2,   alt: "Cutter Lane bathroom" },
+                { src: img_cutter_bath,    alt: "Cutter Lane primary bathroom" },
+                { src: img_cutter_shower,  alt: "Cutter Lane shower" },
+                { src: img_cutter_tub,     alt: "Cutter Lane soaking tub" },
+                { src: img_cutter_pantry,  alt: "Cutter Lane kitchen pantry" },
               ].map((photo, i) => (
                 <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
                   <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />

@@ -35,7 +35,7 @@ import img_desoto_vanity from "@assets/017_703_de_soto-11_1774817217303.jpg";
 import img_desoto_shower2 from "@assets/016_703_de_soto-10_(1)_1774893379243.jpg";
 import img_desoto_kitchen2 from "@assets/034_703_de_soto-33_1774893379244.jpg";
 import img_desoto_dining from "@assets/040_703_de_soto-41_1774893379244.jpg";
-import img_desoto_bath2 from "@assets/041_703_de_soto-42_1774893379245.jpg";
+import img_desoto_bath2 from "@assets/020_703_de_soto-14_1774894070308.jpg";
 
 import img_orchard_kitchen from "@assets/023_pheobe_2550_orchard_avenue_-_13_1774817217305.jpg";
 import img_orchard_bath from "@assets/018_pheobe_2550_orchard_avenue_-_8_1774817217304.jpg";

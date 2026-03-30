@@ -47,6 +47,7 @@ import { useState, useEffect } from "react";
 
 const HERO_SLIDES = [
   { src: img_oakpark_living,   label: "Oak Park Drive",    focusX: "center" },
+  { src: img_oakpark_kitchen2, label: "Oak Park Drive",    focusX: "center" },
   { src: img_hero,             label: "Cutter Lane",       focusX: "center" },
   { src: img_oakpark_fireplace,label: "Oak Park Drive",    focusX: "center" },
   { src: img_cutter_kitchen2,  label: "Cutter Lane",       focusX: "center" },

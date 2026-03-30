@@ -53,7 +53,7 @@ const HERO_SLIDES = [
   { src: img_oakpark_living,   label: "Oak Park Drive",    focusX: "center" },
   { src: img_oakpark_kitchen2, label: "Oak Park Drive",    focusX: "center" },
   { src: img_cutter_kitchen4,  label: "Cutter Lane",       focusX: "center" },
-  { src: img_cutter_kitchen5,  label: "Cutter Lane",       focusX: "center" },
+  { src: img_cutter_kitchen2,  label: "Cutter Lane",       focusX: "center" },
   { src: img_desoto_living,    label: "De Soto Street",    focusX: "center" },
   { src: img_desoto_dining,    label: "De Soto Street",    focusX: "center" },
 ];

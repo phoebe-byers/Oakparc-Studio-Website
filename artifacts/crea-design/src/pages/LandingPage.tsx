@@ -46,8 +46,8 @@ import img_orchard_bunks from "@assets/016_pheobe_2550_orchard_avenue_-_6_177481
 import { useState, useEffect } from "react";
 
 const HERO_SLIDES = [
-  { src: img_hero,             label: "Cutter Lane",       focusX: "center" },
   { src: img_oakpark_living,   label: "Oak Park Drive",    focusX: "center" },
+  { src: img_hero,             label: "Cutter Lane",       focusX: "center" },
   { src: img_oakpark_fireplace,label: "Oak Park Drive",    focusX: "center" },
   { src: img_cutter_kitchen2,  label: "Cutter Lane",       focusX: "center" },
   { src: img_desoto_living,    label: "De Soto Street",    focusX: "center" },

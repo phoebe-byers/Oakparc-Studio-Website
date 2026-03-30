@@ -8,6 +8,7 @@ import img_cutter_bath2 from "@assets/116-web-or-mls-DSC_4939_1774892722082.jpg"
 import img_cutter_dining from "@assets/129-web-or-mls-DSC_5004_1774817217308.jpg";
 import img_cutter_pantry from "@assets/133-web-or-mls-DSC_5024_1774817217309.jpg";
 import img_cutter_living2 from "@assets/119-web-or-mls-DSC_4954_1774817217307.jpg";
+import img_cutter_living3 from "@assets/120-web-or-mls-DSC_4959_1774892936178.jpg";
 import img_cutter_bath from "@assets/95-web-or-mls-DSC_4829_1774817217306.jpg";
 import img_cutter_shower from "@assets/96-web-or-mls-DSC_4834_1774817217307.jpg";
 import img_cutter_tub from "@assets/99-web-or-mls-DSC_4849_1774817217307.jpg";
@@ -323,6 +324,7 @@ export function LandingPage() {
                 { src: img_cutter_kitchen3,alt: "Cutter Lane kitchen backsplash detail" },
                 { src: img_cutter_kitchen2,alt: "Cutter Lane kitchen vaulted" },
                 { src: img_cutter_dining,  alt: "Cutter Lane dining" },
+                { src: img_cutter_living3, alt: "Cutter Lane living room" },
                 { src: img_cutter_bedroom, alt: "Cutter Lane bedroom" },
                 { src: img_cutter_bath2,   alt: "Cutter Lane bathroom" },
                 { src: img_cutter_bath,    alt: "Cutter Lane primary bathroom" },

@@ -329,7 +329,6 @@ export function LandingPage() {
             <div className="grid grid-cols-3 gap-2 mb-8">
               {[
                 { src: img_hero,           alt: "Cutter Lane entry staircase" },
-                { src: img_cutter_kitchen, alt: "Cutter Lane kitchen with navy island" },
                 { src: img_cutter_kitchen4,alt: "Cutter Lane kitchen and dining overview" },
                 { src: img_cutter_kitchen5,alt: "Cutter Lane kitchen island and dining nook" },
                 { src: img_cutter_kitchen3,alt: "Cutter Lane kitchen backsplash detail" },
@@ -339,7 +338,6 @@ export function LandingPage() {
                 { src: img_cutter_bedroom, alt: "Cutter Lane bedroom" },
                 { src: img_cutter_bath2,   alt: "Cutter Lane bathroom" },
                 { src: img_cutter_bath,    alt: "Cutter Lane primary bathroom" },
-                { src: img_cutter_shower,  alt: "Cutter Lane shower" },
                 { src: img_cutter_tub,     alt: "Cutter Lane soaking tub" },
                 { src: img_cutter_pantry,  alt: "Cutter Lane kitchen pantry" },
               ].map((photo, i) => (

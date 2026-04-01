@@ -615,8 +615,44 @@ export function LandingPage() {
         </div>
       </section>
 
+      {/* ── About ── */}
+      <section id="about" className="py-28 px-10 bg-[#f0ece5]">
+        <div className="max-w-6xl mx-auto">
+          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-10">About the Studio</p>
+          <div className="grid grid-cols-2 gap-20 items-start">
+            <div>
+              <h2 className="font-serif-display text-[clamp(2rem,3.5vw,3.2rem)] font-light leading-[1.15] text-[#1c1a17] mb-8">
+                Design built around<br /><em>the way you live.</em>
+              </h2>
+              <p className="font-body text-[13px] text-[#6b6053] font-light leading-relaxed mb-5">
+                Oakparc Studio is a Park City–based interior design and renovation studio working with clients across the Mountain West and beyond. We take a hands-on, full-service approach — from initial concept through final install — so that every decision serves the whole.
+              </p>
+              <p className="font-body text-[13px] text-[#6b6053] font-light leading-relaxed">
+                We work on a limited number of projects each year, allowing us to give every client and every home our complete attention. Whether you're renovating a primary residence, a second home, or an investment property, we bring the same care to every square foot.
+              </p>
+            </div>
+            <div className="pt-2">
+              <dl className="divide-y divide-[#d8d1c7]">
+                {[
+                  { label: "Location",  value: "Park City, UT — Serving Clients Nationwide" },
+                  { label: "Services",  value: "Full-Service Design, Virtual Design, Renovation Management" },
+                  { label: "Approach",  value: "High-touch, limited roster, concept through installation" },
+                  { label: "Projects",  value: "Primary residences, second homes, investment properties" },
+                  { label: "Contact",   value: "hello@oakparcstudio.com" },
+                ].map(({ label, value }) => (
+                  <div key={label} className="py-5 flex gap-10">
+                    <dt className="font-body text-[10px] tracking-[0.2em] uppercase text-[#9a8f7e] w-24 flex-shrink-0 pt-px">{label}</dt>
+                    <dd className="font-body text-[12px] text-[#5a5047] font-light leading-relaxed">{value}</dd>
+                  </div>
+                ))}
+              </dl>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* ── Footer ── */}
-      <footer id="about" className="py-14 px-10 bg-[#1c1a17]">
+      <footer className="py-14 px-10 bg-[#1c1a17]">
         <div className="max-w-6xl mx-auto flex flex-wrap items-start justify-between gap-10">
           <div>
             <p className="font-serif-display text-[18px] font-light tracking-widest text-white uppercase mb-2">Oakparc Studio</p>

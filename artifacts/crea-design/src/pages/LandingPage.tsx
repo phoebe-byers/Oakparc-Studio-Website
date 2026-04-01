@@ -620,18 +620,21 @@ export function LandingPage() {
       <section id="about" className="py-28 px-10 bg-[#f0ece5]">
         <div className="max-w-6xl mx-auto">
           <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-10">About the Studio</p>
-          <div className="grid grid-cols-2 gap-16 items-start">
-            {/* Photo */}
-            <div className="relative overflow-hidden" style={{ height: "560px" }}>
-              <img
-                src={img_about}
-                alt="Phoebe Byers and Geoffrey Green, Oakparc Studio"
-                className="w-full h-full object-cover object-top"
-                style={{ filter: "grayscale(100%) contrast(1.08) brightness(0.92)" }}
-              />
+          <div className="flex gap-16 items-start">
+            {/* Circle photo */}
+            <div className="flex-shrink-0 flex flex-col items-center gap-4 pt-2">
+              <div className="rounded-full overflow-hidden" style={{ width: "260px", height: "260px" }}>
+                <img
+                  src={img_about}
+                  alt="Phoebe Byers and Geoffrey Green, Oakparc Studio"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "center 15%", filter: "grayscale(100%)" }}
+                />
+              </div>
+              <p className="font-body text-[10px] tracking-[0.15em] uppercase text-[#9a8f7e] text-center">Phoebe Byers &amp; Geoffrey Green</p>
             </div>
             {/* Text */}
-            <div className="pt-4">
+            <div className="pt-4 flex-1">
               <h2 className="font-serif-display text-[clamp(2rem,3vw,3rem)] font-light leading-[1.15] text-[#1c1a17] mb-8">
                 Design built around<br /><em>the way you live.</em>
               </h2>

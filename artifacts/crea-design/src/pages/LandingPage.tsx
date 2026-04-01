@@ -147,7 +147,7 @@ export function LandingPage() {
           Oakparc Studio
         </div>
         <div className="flex items-center gap-10">
-          <a href="#studio" data-testid="nav-studio" className="font-body text-[10px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Studio</a>
+          <a href="#about" data-testid="nav-studio" className="font-body text-[10px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">About</a>
           <a href="#contact" data-testid="nav-start-project" className="font-body text-[10px] tracking-[0.25em] uppercase text-white border-b border-white pb-px hover:text-white/70 hover:border-white/70 transition-colors">
             Start a Project
           </a>
@@ -616,14 +616,14 @@ export function LandingPage() {
       </section>
 
       {/* ── Footer ── */}
-      <footer id="studio" className="py-14 px-10 bg-[#1c1a17]">
+      <footer id="about" className="py-14 px-10 bg-[#1c1a17]">
         <div className="max-w-6xl mx-auto flex flex-wrap items-start justify-between gap-10">
           <div>
             <p className="font-serif-display text-[18px] font-light tracking-widest text-white uppercase mb-2">Oakparc Studio</p>
             <p className="font-body text-[11px] text-white/30 font-light">Serving Clients Nationwide</p>
           </div>
           <div className="grid grid-cols-2 gap-x-16 gap-y-3">
-            {["Work", "Services", "Virtual Design", "Studio", "Press", "Contact"].map(link => (
+            {["Work", "Services", "Virtual Design", "About", "Press", "Contact"].map(link => (
               <a key={link} href="#" data-testid={`footer-link-${link.toLowerCase().replace(" ", "-")}`} className="font-body text-[10px] tracking-[0.2em] uppercase text-white/30 hover:text-white/60 transition-colors">{link}</a>
             ))}
           </div>

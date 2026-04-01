@@ -333,13 +333,13 @@ export function LandingPage() {
                 { src: img_cutter_kitchen5,alt: "Cutter Lane kitchen island and dining nook" },
                 { src: img_cutter_kitchen3,alt: "Cutter Lane kitchen backsplash detail" },
                 { src: img_cutter_kitchen2,alt: "Cutter Lane kitchen vaulted" },
+                { src: img_cutter_pantry,  alt: "Cutter Lane kitchen pantry" },
                 { src: img_cutter_dining,  alt: "Cutter Lane dining" },
                 { src: img_cutter_living3, alt: "Cutter Lane living room" },
                 { src: img_cutter_bedroom, alt: "Cutter Lane bedroom" },
                 { src: img_cutter_bath2,   alt: "Cutter Lane bathroom" },
                 { src: img_cutter_bath,    alt: "Cutter Lane primary bathroom" },
                 { src: img_cutter_tub,     alt: "Cutter Lane soaking tub" },
-                { src: img_cutter_pantry,  alt: "Cutter Lane kitchen pantry" },
               ].map((photo, i) => (
                 <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
                   <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />
@@ -371,14 +371,14 @@ export function LandingPage() {
                 { src: img_oakpark_fireplace, alt: "Oak Park Drive living room fireplace" },
                 { src: img_oakpark_kitchen, alt: "Oak Park Drive kitchen" },
                 { src: img_oakpark_kitchen2, alt: "Oak Park Drive kitchen detail" },
+                { src: img_oakpark_bar, alt: "Oak Park Drive wet bar" },
+                { src: img_oakpark_entry, alt: "Oak Park Drive entry" },
                 { src: img_oakpark_suite, alt: "Oak Park Drive primary suite" },
                 { src: img_oakpark_bedroom, alt: "Oak Park Drive bedroom" },
                 { src: img_oakpark_den, alt: "Oak Park Drive den" },
-                { src: img_oakpark_entry, alt: "Oak Park Drive entry" },
                 { src: img_oakpark_bath, alt: "Oak Park Drive bathroom" },
                 { src: img_oakpark_shower_penny, alt: "Oak Park Drive penny tile shower" },
                 { src: img_oakpark_shower_rain, alt: "Oak Park Drive rain shower" },
-                { src: img_oakpark_bar, alt: "Oak Park Drive wet bar" },
               ].map((photo, i) => (
                 <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
                   <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />

@@ -13,6 +13,7 @@ import img_cutter_living2 from "@assets/119-web-or-mls-DSC_4954_1774817217307.jp
 import img_cutter_living3 from "@assets/120-web-or-mls-DSC_4959_1774892936178.jpg";
 import img_virtual_design from "@assets/543-Oak-Park-Dr-San-Francisco_(09_of_57)_1774895776642.jpg";
 import img_pull_quote from "@assets/543-Oak-Park-Dr-San-Francisco_(20_of_57)_1774895966992.jpg";
+import img_about from "@assets/Byers2022edited-15_(1)_1775067289535.jpg";
 import img_cutter_bath from "@assets/95-web-or-mls-DSC_4829_1774817217306.jpg";
 import img_cutter_shower from "@assets/96-web-or-mls-DSC_4834_1774817217307.jpg";
 import img_cutter_tub from "@assets/99-web-or-mls-DSC_4849_1774817217307.jpg";
@@ -619,33 +620,41 @@ export function LandingPage() {
       <section id="about" className="py-28 px-10 bg-[#f0ece5]">
         <div className="max-w-6xl mx-auto">
           <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-10">About the Studio</p>
-          <div className="grid grid-cols-2 gap-20 items-start">
-            <div>
-              <h2 className="font-serif-display text-[clamp(2rem,3.5vw,3.2rem)] font-light leading-[1.15] text-[#1c1a17] mb-8">
+          <div className="grid grid-cols-2 gap-16 items-start">
+            {/* Photo */}
+            <div className="relative overflow-hidden" style={{ height: "560px" }}>
+              <img
+                src={img_about}
+                alt="Phoebe Byers and Geoffrey Green, Oakparc Studio"
+                className="w-full h-full object-cover object-top"
+                style={{ filter: "grayscale(100%) contrast(1.08) brightness(0.92)" }}
+              />
+            </div>
+            {/* Text */}
+            <div className="pt-4">
+              <h2 className="font-serif-display text-[clamp(2rem,3vw,3rem)] font-light leading-[1.15] text-[#1c1a17] mb-8">
                 Design built around<br /><em>the way you live.</em>
               </h2>
               <p className="font-body text-[13px] text-[#6b6053] font-light leading-relaxed mb-5">
-                Oakparc Studio is a Park City–based interior design and renovation studio working with clients across the Mountain West and beyond. We take a hands-on, full-service approach — from initial concept through final install — so that every decision serves the whole.
+                Oakparc Studio is a husband-and-wife design and renovation studio led by Phoebe Byers and Geoffrey Green. The studio was born out of their first project on Oak Park Drive in San Francisco, a full-scale home overhaul and true labor of love that sparked their passion for reimagining a space from the inside out.
               </p>
-              <p className="font-body text-[13px] text-[#6b6053] font-light leading-relaxed">
-                We work on a limited number of projects each year, allowing us to give every client and every home our complete attention. Whether you're renovating a primary residence, a second home, or an investment property, we bring the same care to every square foot.
+              <p className="font-body text-[13px] text-[#6b6053] font-light leading-relaxed mb-10">
+                Since then, they've conceptualized, designed, planned, and executed more than a dozen renovations, from full-home transformations to investment properties and everything in between. Their work is grounded in thoughtful design, careful planning, and a refined, detail-driven approach to every phase — from concept through execution — creating spaces that feel cohesive, functional, and enduring.
               </p>
-            </div>
-            <div className="pt-2">
-              <dl className="divide-y divide-[#d8d1c7]">
-                {[
-                  { label: "Location",  value: "Park City, UT — Serving Clients Nationwide" },
-                  { label: "Services",  value: "Full-Service Design, Virtual Design, Renovation Management" },
-                  { label: "Approach",  value: "High-touch, limited roster, concept through installation" },
-                  { label: "Projects",  value: "Primary residences, second homes, investment properties" },
-                  { label: "Contact",   value: "hello@oakparcstudio.com" },
-                ].map(({ label, value }) => (
-                  <div key={label} className="py-5 flex gap-10">
-                    <dt className="font-body text-[10px] tracking-[0.2em] uppercase text-[#9a8f7e] w-24 flex-shrink-0 pt-px">{label}</dt>
-                    <dd className="font-body text-[12px] text-[#5a5047] font-light leading-relaxed">{value}</dd>
-                  </div>
-                ))}
-              </dl>
+              <div className="border-t border-[#d8d1c7] pt-8">
+                <dl className="grid grid-cols-1 gap-4">
+                  {[
+                    { label: "Location", value: "Park City, UT — Serving Clients Nationwide" },
+                    { label: "Services", value: "Full-Service Design · Virtual Design · Renovation Management" },
+                    { label: "Contact",  value: "hello@oakparcstudio.com" },
+                  ].map(({ label, value }) => (
+                    <div key={label} className="flex gap-8">
+                      <dt className="font-body text-[10px] tracking-[0.2em] uppercase text-[#9a8f7e] w-20 flex-shrink-0 pt-px">{label}</dt>
+                      <dd className="font-body text-[12px] text-[#5a5047] font-light leading-relaxed">{value}</dd>
+                    </div>
+                  ))}
+                </dl>
+              </div>
             </div>
           </div>
         </div>

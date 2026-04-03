@@ -337,8 +337,8 @@ export function LandingPage() {
                 { src: img_cutter_pantry,  alt: "Cutter Lane kitchen pantry" },
                 { src: img_cutter_dining,  alt: "Cutter Lane dining" },
                 { src: img_cutter_living3, alt: "Cutter Lane living room" },
-                { src: img_cutter_bedroom, alt: "Cutter Lane bedroom" },
                 { src: img_cutter_bath2,   alt: "Cutter Lane bathroom" },
+                { src: img_cutter_bedroom, alt: "Cutter Lane bedroom" },
                 { src: img_cutter_bath,    alt: "Cutter Lane primary bathroom" },
                 { src: img_cutter_tub,     alt: "Cutter Lane soaking tub" },
               ].map((photo, i) => (
@@ -368,18 +368,18 @@ export function LandingPage() {
             </p>
             <div className="grid grid-cols-3 gap-2 mb-8">
               {[
-                { src: img_oakpark_living, alt: "Oak Park Drive open plan living" },
-                { src: img_oakpark_fireplace, alt: "Oak Park Drive living room fireplace" },
-                { src: img_oakpark_kitchen, alt: "Oak Park Drive kitchen" },
-                { src: img_oakpark_kitchen2, alt: "Oak Park Drive kitchen detail" },
-                { src: img_oakpark_bar, alt: "Oak Park Drive wet bar" },
-                { src: img_oakpark_entry, alt: "Oak Park Drive entry" },
-                { src: img_oakpark_suite, alt: "Oak Park Drive primary suite" },
-                { src: img_oakpark_bedroom, alt: "Oak Park Drive bedroom" },
-                { src: img_oakpark_den, alt: "Oak Park Drive den" },
-                { src: img_oakpark_bath, alt: "Oak Park Drive bathroom" },
+                { src: img_oakpark_living,       alt: "Oak Park Drive open plan living" },
+                { src: img_oakpark_fireplace,    alt: "Oak Park Drive living room fireplace" },
+                { src: img_oakpark_entry,        alt: "Oak Park Drive entry" },
+                { src: img_oakpark_kitchen,      alt: "Oak Park Drive kitchen" },
+                { src: img_oakpark_kitchen2,     alt: "Oak Park Drive kitchen detail" },
+                { src: img_oakpark_bar,          alt: "Oak Park Drive wet bar" },
+                { src: img_oakpark_bath,         alt: "Oak Park Drive bathroom" },
+                { src: img_oakpark_shower_rain,  alt: "Oak Park Drive rain shower" },
+                { src: img_oakpark_suite,        alt: "Oak Park Drive primary suite" },
+                { src: img_oakpark_bedroom,      alt: "Oak Park Drive bedroom" },
+                { src: img_oakpark_den,          alt: "Oak Park Drive den" },
                 { src: img_oakpark_shower_penny, alt: "Oak Park Drive penny tile shower" },
-                { src: img_oakpark_shower_rain, alt: "Oak Park Drive rain shower" },
               ].map((photo, i) => (
                 <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
                   <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />
@@ -421,17 +421,17 @@ export function LandingPage() {
                 <img src={img_desoto_kitchen} alt="De Soto kitchen detail" className="w-full h-full object-cover" />
               </div>
               <div className="relative overflow-hidden" style={{ height: "28vh" }}>
-                <img src={img_desoto_entry} alt="De Soto entry" className="w-full h-full object-cover" />
+                <img src={img_desoto_bath2} alt="De Soto bathroom with blue tile" className="w-full h-full object-cover" />
               </div>
               {/* Row 3 */}
+              <div className="relative overflow-hidden" style={{ height: "28vh" }}>
+                <img src={img_desoto_entry} alt="De Soto entry" className="w-full h-full object-cover" />
+              </div>
               <div className="relative overflow-hidden" style={{ height: "28vh" }}>
                 <img src={img_desoto_shower2} alt="De Soto hex tile shower" className="w-full h-full object-cover" />
               </div>
               <div className="relative overflow-hidden" style={{ height: "28vh" }}>
                 <img src={img_desoto_vanity} alt="De Soto bathroom vanity" className="w-full h-full object-cover" />
-              </div>
-              <div className="relative overflow-hidden" style={{ height: "28vh" }}>
-                <img src={img_desoto_bath2} alt="De Soto dark tile shower" className="w-full h-full object-cover" />
               </div>
             </div>
             <ul className="grid grid-cols-3 gap-x-10 gap-y-3">

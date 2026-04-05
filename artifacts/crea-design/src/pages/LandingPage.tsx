@@ -144,8 +144,10 @@ export function LandingPage() {
           <a href="#work" data-testid="nav-work" className="font-body text-[10px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Work</a>
           <a href="#services" data-testid="nav-services" className="font-body text-[10px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Services</a>
         </div>
-        <div className="font-serif-display text-[22px] font-light tracking-widest text-white uppercase" data-testid="brand-name">
-          Oakparc Studio
+        <div className="flex items-center gap-3" data-testid="brand-name">
+          <span className="w-8 h-px bg-white/60" />
+          <span className="font-serif-display text-[22px] font-light tracking-widest text-white uppercase">Oakparc Studio</span>
+          <span className="w-8 h-px bg-white/60" />
         </div>
         <div className="flex items-center gap-10">
           <a href="#about" data-testid="nav-studio" className="font-body text-[10px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">About</a>
@@ -664,7 +666,11 @@ export function LandingPage() {
       <footer className="py-14 px-10 bg-[#1c1a17]">
         <div className="max-w-6xl mx-auto flex flex-wrap items-start justify-between gap-10">
           <div>
-            <p className="font-serif-display text-[18px] font-light tracking-widest text-white uppercase mb-2">Oakparc Studio</p>
+            <div className="flex items-center gap-3 mb-2">
+              <span className="w-6 h-px bg-white/50" />
+              <p className="font-serif-display text-[18px] font-light tracking-widest text-white uppercase">Oakparc Studio</p>
+              <span className="w-6 h-px bg-white/50" />
+            </div>
             <p className="font-body text-[11px] text-white/30 font-light">Serving Clients Nationwide</p>
           </div>
           <div className="grid grid-cols-2 gap-x-16 gap-y-3">

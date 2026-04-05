@@ -84,17 +84,17 @@ const services = [
 
 const projects = [
   {
-    img: img_cutter_kitchen2,
-    label: "Cutter Lane",
-    type: "Full Home Renovation",
-    gallery: [img_cutter_kitchen, img_cutter_dining, img_cutter_pantry, img_cutter_living2, img_cutter_bath, img_cutter_shower, img_cutter_tub],
-    featured: true,
-  },
-  {
     img: img_oakpark_living,
     label: "Oak Park Drive",
     type: "Full Home Renovation",
     gallery: [img_oakpark_fireplace, img_oakpark_kitchen, img_oakpark_kitchen2, img_oakpark_suite, img_oakpark_bedroom, img_oakpark_den, img_oakpark_shower_penny, img_oakpark_bath, img_oakpark_entry, img_oakpark_shower_rain, img_oakpark_bar],
+    featured: true,
+  },
+  {
+    img: img_cutter_kitchen2,
+    label: "Cutter Lane",
+    type: "Full Home Renovation",
+    gallery: [img_cutter_kitchen, img_cutter_dining, img_cutter_pantry, img_cutter_living2, img_cutter_bath, img_cutter_shower, img_cutter_tub],
     featured: true,
   },
   {
@@ -265,10 +265,10 @@ export function LandingPage() {
             </a>
           </div>
 
-          {/* Row 1: Cutter Lane large (featured) + Oak Park Drive right */}
+          {/* Row 1: Oak Park Drive large (featured) + Cutter Lane right */}
           <div className="grid grid-cols-3 gap-4 mb-4">
-            {/* Cutter Lane — featured large */}
-            <div className="col-span-2 relative h-[62vh] overflow-hidden group" data-testid="card-project-cutter-lane">
+            {/* Oak Park Drive — featured large */}
+            <div className="col-span-2 relative h-[62vh] overflow-hidden group" data-testid="card-project-oak-park">
               <img
                 src={projects[0].img}
                 alt={projects[0].label}
@@ -285,8 +285,8 @@ export function LandingPage() {
               </div>
             </div>
 
-            {/* Oak Park Drive — featured right */}
-            <div className="col-span-1 relative h-[62vh] overflow-hidden group" data-testid="card-project-oak-park">
+            {/* Cutter Lane — right */}
+            <div className="col-span-1 relative h-[62vh] overflow-hidden group" data-testid="card-project-cutter-lane">
               <img
                 src={projects[1].img}
                 alt={projects[1].label}
@@ -320,45 +320,6 @@ export function LandingPage() {
       <section className="px-10 pb-24">
         <div className="max-w-6xl mx-auto space-y-0">
 
-          {/* ── Cutter Lane ── */}
-          <div className="border-t border-[#d8d1c7] pt-14 pb-16">
-            <div className="mb-3 flex items-baseline gap-6">
-              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Park City, UT</p>
-              <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Cutter Lane</h3>
-            </div>
-            <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
-              A complete renovation of a 1990s Park City home — cosmetic updates with light structural work — designed to refresh the space and improve everyday flow.
-            </p>
-            <div className="grid grid-cols-3 gap-2 mb-8">
-              {[
-                { src: img_hero,           alt: "Cutter Lane entry staircase" },
-                { src: img_cutter_kitchen4,alt: "Cutter Lane kitchen and dining overview" },
-                { src: img_cutter_kitchen5,alt: "Cutter Lane kitchen island and dining nook" },
-                { src: img_cutter_kitchen3,alt: "Cutter Lane kitchen backsplash detail" },
-                { src: img_cutter_kitchen2,alt: "Cutter Lane kitchen vaulted" },
-                { src: img_cutter_pantry,  alt: "Cutter Lane kitchen pantry" },
-                { src: img_cutter_dining,  alt: "Cutter Lane dining" },
-                { src: img_cutter_living3, alt: "Cutter Lane living room" },
-                { src: img_cutter_bath2,   alt: "Cutter Lane bathroom" },
-                { src: img_cutter_bedroom, alt: "Cutter Lane bedroom" },
-                { src: img_cutter_bath,    alt: "Cutter Lane primary bathroom" },
-                { src: img_cutter_tub,     alt: "Cutter Lane soaking tub" },
-              ].map((photo, i) => (
-                <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
-                  <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />
-                </div>
-              ))}
-            </div>
-            <ul className="grid grid-cols-3 gap-x-10 gap-y-3">
-              {["Minor layout adjustments with limited structural changes", "Reworked kitchen layout for better functionality", "Updated bathrooms with new finishes and fixtures", "Added exterior deck and playhouse for expanded outdoor living", "New systems throughout", "Full selection of finishes and fixtures throughout"].map((item, i) => (
-                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
-                  <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
-                  {item}
-                </li>
-              ))}
-            </ul>
-          </div>
-
           {/* ── Oak Park Drive ── */}
           <div className="border-t border-[#d8d1c7] pt-14 pb-16">
             <div className="mb-3 flex items-baseline gap-6">
@@ -390,6 +351,45 @@ export function LandingPage() {
             </div>
             <ul className="grid grid-cols-3 gap-x-10 gap-y-3">
               {["Reworked layout with structural wall modifications", "New electrical, plumbing, and windows throughout", "Basement expansion with bedroom, bathroom, and kitchenette", "Added exterior patio for indoor-outdoor living", "New systems throughout", "Full selection of finishes and fixtures"].map((item, i) => (
+                <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
+                  <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
+                  {item}
+                </li>
+              ))}
+            </ul>
+          </div>
+
+          {/* ── Cutter Lane ── */}
+          <div className="border-t border-[#d8d1c7] pt-14 pb-16">
+            <div className="mb-3 flex items-baseline gap-6">
+              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Park City, UT</p>
+              <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Cutter Lane</h3>
+            </div>
+            <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
+              A complete renovation of a 1990s Park City home — cosmetic updates with light structural work — designed to refresh the space and improve everyday flow.
+            </p>
+            <div className="grid grid-cols-3 gap-2 mb-8">
+              {[
+                { src: img_hero,           alt: "Cutter Lane entry staircase" },
+                { src: img_cutter_kitchen4,alt: "Cutter Lane kitchen and dining overview" },
+                { src: img_cutter_kitchen5,alt: "Cutter Lane kitchen island and dining nook" },
+                { src: img_cutter_kitchen3,alt: "Cutter Lane kitchen backsplash detail" },
+                { src: img_cutter_kitchen2,alt: "Cutter Lane kitchen vaulted" },
+                { src: img_cutter_pantry,  alt: "Cutter Lane kitchen pantry" },
+                { src: img_cutter_dining,  alt: "Cutter Lane dining" },
+                { src: img_cutter_living3, alt: "Cutter Lane living room" },
+                { src: img_cutter_bath2,   alt: "Cutter Lane bathroom" },
+                { src: img_cutter_bedroom, alt: "Cutter Lane bedroom" },
+                { src: img_cutter_bath,    alt: "Cutter Lane primary bathroom" },
+                { src: img_cutter_tub,     alt: "Cutter Lane soaking tub" },
+              ].map((photo, i) => (
+                <div key={i} className="relative overflow-hidden" style={{ height: "27vh" }}>
+                  <img src={photo.src} alt={photo.alt} className="w-full h-full object-cover hover:scale-[1.03] transition-transform duration-500" />
+                </div>
+              ))}
+            </div>
+            <ul className="grid grid-cols-3 gap-x-10 gap-y-3">
+              {["Minor layout adjustments with limited structural changes", "Reworked kitchen layout for better functionality", "Updated bathrooms with new finishes and fixtures", "Added exterior deck and playhouse for expanded outdoor living", "New systems throughout", "Full selection of finishes and fixtures throughout"].map((item, i) => (
                 <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
                   <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
                   {item}

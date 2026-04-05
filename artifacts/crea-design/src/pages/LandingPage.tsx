@@ -674,14 +674,14 @@ export function LandingPage() {
             <p className="font-body text-[11px] text-white/30 font-light">Serving Clients Nationwide</p>
           </div>
           <div className="grid grid-cols-2 gap-x-16 gap-y-3">
-            {["Work", "Services", "Virtual Design", "About", "Press", "Contact"].map(link => (
+            {["Work", "Services", "Virtual Design", "About", "Contact"].map(link => (
               <a key={link} href="#" data-testid={`footer-link-${link.toLowerCase().replace(" ", "-")}`} className="font-body text-[10px] tracking-[0.2em] uppercase text-white/30 hover:text-white/60 transition-colors">{link}</a>
             ))}
           </div>
           <div>
             <p className="font-body text-[10px] tracking-[0.2em] uppercase text-white/30 mb-4">Follow Along</p>
             <div className="flex flex-col gap-2">
-              {["Instagram", "Pinterest", "Houzz"].map(s => (
+              {["Instagram"].map(s => (
                 <a key={s} href="#" data-testid={`social-link-${s.toLowerCase()}`} className="font-body text-[10px] tracking-[0.15em] uppercase text-white/30 hover:text-white/60 transition-colors">{s}</a>
               ))}
             </div>

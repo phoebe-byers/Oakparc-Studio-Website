@@ -1,5 +1,5 @@
 {
-  "buildCommand": "pnpm --filter @workspace/crea-design build",
+  "buildCommand": "pnpm --filter @workspace/oakparc-studio build",
   "outputDirectory": "artifacts/crea-design/dist/public",
   "framework": null,
   "rewrites": [

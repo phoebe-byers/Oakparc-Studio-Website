@@ -1,6 +1,6 @@
 kind = "web"
 previewPath = "/"
-title = "Crea Design Co"
+title = "Oakparc Studio"
 version = "1.0.0"
 id = "artifacts/crea-design"
 router = "path"
@@ -15,10 +15,10 @@ paths = [ "/" ]
 localPort = 21876
 
 [services.development]
-run = "pnpm --filter @workspace/crea-design run dev"
+run = "pnpm --filter @workspace/oakparc-studio run dev"
 
 [services.production]
-build = [ "pnpm", "--filter", "@workspace/crea-design", "run", "build" ]
+build = [ "pnpm", "--filter", "@workspace/oakparc-studio", "run", "build" ]
 publicDir = "artifacts/crea-design/dist/public"
 serve = "static"
 

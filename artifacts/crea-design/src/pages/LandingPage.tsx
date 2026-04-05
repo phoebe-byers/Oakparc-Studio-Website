@@ -435,7 +435,7 @@ export function LandingPage() {
               </div>
             </div>
             <ul className="grid grid-cols-3 gap-x-10 gap-y-3">
-              {["Full cosmetic renovation across both units", "Updated kitchens and bathrooms", "Full selection of finishes and fixtures", "Designed and furnished with STR guests in mind"].map((item, i) => (
+              {["Full cosmetic renovation across both units", "Updated kitchens and bathrooms", "Full selection of finishes and fixtures", "Designed with STR guests in mind"].map((item, i) => (
                 <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
                   <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
                   {item}
@@ -477,7 +477,7 @@ export function LandingPage() {
               </div>
             </div>
             <ul className="grid grid-cols-3 gap-x-10 gap-y-3">
-              {["Layout improvements to enhance flow and function", "Updated electrical, plumbing, and core systems", "Renovated kitchens and bathrooms throughout", "Full selection of finishes and fixtures", "Designed and furnished with STR guests in mind"].map((item, i) => (
+              {["Layout improvements to enhance flow and function", "Updated electrical, plumbing, and core systems", "Renovated kitchens and bathrooms throughout", "Full selection of finishes and fixtures", "Designed with STR guests in mind"].map((item, i) => (
                 <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
                   <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
                   {item}

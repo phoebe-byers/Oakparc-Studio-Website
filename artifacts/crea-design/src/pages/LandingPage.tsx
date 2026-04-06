@@ -265,35 +265,31 @@ export function LandingPage() {
             </a>
           </div>
 
-          {/* Row 1: Oak Park Drive large (featured) + Cutter Lane right */}
-          <div className="grid grid-cols-3 gap-4 mb-4">
-            {/* Oak Park Drive — left narrow */}
-            <div className="col-span-1 relative h-[62vh] overflow-hidden group" data-testid="card-project-oak-park">
+          {/* Row 1: Oak Park Drive + Cutter Lane — equal */}
+          <div className="grid grid-cols-2 gap-4 mb-4">
+            {/* Oak Park Drive */}
+            <div className="relative h-[50vh] overflow-hidden group" data-testid="card-project-oak-park">
               <img
                 src={img_oakpark_fireplace}
                 alt={projects[0].label}
                 className="w-full h-full object-cover object-center transition-transform duration-700 group-hover:scale-[1.03]"
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
-              <div className="absolute bottom-6 left-5">
+              <div className="absolute bottom-5 left-5">
                 <p className="font-body text-[9px] tracking-[0.25em] uppercase text-white/60 mb-0.5">{projects[0].type}</p>
                 <p className="font-serif-display text-[1.1rem] font-light text-white">{projects[0].label}</p>
               </div>
             </div>
 
-            {/* Cutter Lane — featured large */}
-            <div className="col-span-2 relative h-[62vh] overflow-hidden group" data-testid="card-project-cutter-lane">
+            {/* Cutter Lane */}
+            <div className="relative h-[50vh] overflow-hidden group" data-testid="card-project-cutter-lane">
               <img
                 src={img_cutter_kitchen4}
                 alt={projects[1].label}
                 className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]"
               />
-              <div className="absolute bottom-0 left-0 right-0 p-6 bg-gradient-to-t from-black/60 to-transparent opacity-0 group-hover:opacity-100 transition-opacity duration-300">
-                <p className="font-body text-[10px] tracking-[0.2em] uppercase text-white/70 mb-1">{projects[1].type}</p>
-                <p className="font-serif-display text-xl font-light text-white">{projects[1].label}</p>
-              </div>
-              {/* Always-visible label at bottom */}
-              <div className="absolute bottom-6 left-6">
+              <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
+              <div className="absolute bottom-5 left-5">
                 <p className="font-body text-[9px] tracking-[0.25em] uppercase text-white/60 mb-0.5">{projects[1].type}</p>
                 <p className="font-serif-display text-[1.1rem] font-light text-white">{projects[1].label}</p>
               </div>

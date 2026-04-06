@@ -1,31 +1,30 @@
 kind = "web"
-previewPath = "/"
-title = "Oakparc Studio"
-version = "1.0.0"
-id = "artifacts/crea-design"
-router = "path"
+  previewPath = "/"
+  title = "Oakparc Studio"
+  version = "1.0.0"
+  id = "artifacts/crea-design"
+  router = "path"
 
-[[integratedSkills]]
-name = "react-vite"
-version = "1.0.0"
+  [[integratedSkills]]
+  name = "react-vite"
+  version = "1.0.0"
 
-[[services]]
-name = "web"
-paths = [ "/" ]
-localPort = 21876
+  [[services]]
+  name = "web"
+  paths = [ "/" ]
+  localPort = 21876
 
-[services.development]
-run = "pnpm --filter @workspace/oakparc-studio run dev"
+  [services.development]
+  run = "pnpm --filter @workspace/oakparc-studio run dev"
 
-[services.production]
-build = [ "pnpm", "--filter", "@workspace/oakparc-studio", "run", "build" ]
-publicDir = "artifacts/crea-design/dist/public"
-serve = "static"
+  [services.production]
+  build = [ "pnpm", "--filter", "@workspace/oakparc-studio", "run", "build" ]
+  run = [ "node", "artifacts/crea-design/server.mjs" ]
 
-[[services.production.rewrites]]
-from = "/*"
-to = "/index.html"
+  [services.production.env]
+  PORT = "21876"
 
-[services.env]
-PORT = "21876"
-BASE_PATH = "/"
+  [services.env]
+  PORT = "21876"
+  BASE_PATH = "/"
+  

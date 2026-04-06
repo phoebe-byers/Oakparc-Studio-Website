@@ -13,7 +13,7 @@ import img_cutter_living2 from "@assets/119-web-or-mls-DSC_4954_1774817217307.jp
 import img_cutter_living3 from "@assets/120-web-or-mls-DSC_4959_1774892936178.jpg";
 import img_virtual_design from "@assets/543-Oak-Park-Dr-San-Francisco_(09_of_57)_1774895776642.jpg";
 import img_pull_quote from "@assets/543-Oak-Park-Dr-San-Francisco_(20_of_57)_1774895966992.jpg";
-import img_about from "@assets/Byers2022edited-15_(1)_1775067289535.jpg";
+import img_about from "@assets/Byers2022edited-15_(1)_1775496503142.jpg";
 import img_cutter_bath from "@assets/95-web-or-mls-DSC_4829_1774817217306.jpg";
 import img_cutter_shower from "@assets/96-web-or-mls-DSC_4834_1774817217307.jpg";
 import img_cutter_tub from "@assets/99-web-or-mls-DSC_4849_1774817217307.jpg";
@@ -620,13 +620,15 @@ export function LandingPage() {
           <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-10">About the Studio</p>
           <div className="grid grid-cols-2 gap-16 items-start">
             {/* Photo */}
-            <div className="relative overflow-hidden" style={{ height: "380px" }}>
-              <img
-                src={img_about}
-                alt="Phoebe Byers and Geoffrey Green, Oakparc Studio"
-                className="w-full h-full object-cover"
-                style={{ objectPosition: "center 20%", filter: "grayscale(100%)" }}
-              />
+            <div className="flex items-start justify-center pt-4">
+              <div className="w-72 h-72 rounded-full overflow-hidden flex-shrink-0">
+                <img
+                  src={img_about}
+                  alt="Phoebe Byers and Geoffrey Green, Oakparc Studio"
+                  className="w-full h-full object-cover"
+                  style={{ objectPosition: "center 15%" }}
+                />
+              </div>
             </div>
             {/* Text */}
             <div className="pt-4">

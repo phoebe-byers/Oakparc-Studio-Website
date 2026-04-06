@@ -87,6 +87,7 @@ const projects = [
     img: img_oakpark_living,
     label: "Oak Park Drive",
     type: "Full Home Renovation",
+    anchor: "project-oak-park",
     gallery: [img_oakpark_fireplace, img_oakpark_kitchen, img_oakpark_kitchen2, img_oakpark_suite, img_oakpark_bedroom, img_oakpark_den, img_oakpark_shower_penny, img_oakpark_bath, img_oakpark_entry, img_oakpark_shower_rain, img_oakpark_bar],
     featured: true,
   },
@@ -94,6 +95,7 @@ const projects = [
     img: img_cutter_kitchen2,
     label: "Cutter Lane",
     type: "Full Home Renovation",
+    anchor: "project-cutter-lane",
     gallery: [img_cutter_kitchen, img_cutter_dining, img_cutter_pantry, img_cutter_living2, img_cutter_bath, img_cutter_shower, img_cutter_tub],
     featured: true,
   },
@@ -101,6 +103,7 @@ const projects = [
     img: img_desoto_living,
     label: "De Soto Street",
     type: "Full Home Renovation",
+    anchor: "project-de-soto",
     gallery: [img_desoto_entry, img_desoto_kitchen, img_desoto_bath, img_desoto_shower, img_desoto_vanity],
     featured: false,
   },
@@ -108,6 +111,7 @@ const projects = [
     img: img_orchard_kitchen,
     label: "Orchard Avenue",
     type: "Full Home Renovation",
+    anchor: "project-orchard",
     gallery: [img_orchard_bath, img_orchard_bedroom],
     featured: false,
   },
@@ -268,7 +272,7 @@ export function LandingPage() {
           {/* Row 1: Oak Park Drive + Cutter Lane — equal */}
           <div className="grid grid-cols-2 gap-4 mb-4">
             {/* Oak Park Drive */}
-            <div className="relative h-[50vh] overflow-hidden group" data-testid="card-project-oak-park">
+            <a href={`#${projects[0].anchor}`} className="relative h-[50vh] overflow-hidden group block" data-testid="card-project-oak-park">
               <img
                 src={img_oakpark_fireplace}
                 alt={projects[0].label}
@@ -279,10 +283,10 @@ export function LandingPage() {
                 <p className="font-body text-[9px] tracking-[0.25em] uppercase text-white/60 mb-0.5">{projects[0].type}</p>
                 <p className="font-serif-display text-[1.1rem] font-light text-white">{projects[0].label}</p>
               </div>
-            </div>
+            </a>
 
             {/* Cutter Lane */}
-            <div className="relative h-[50vh] overflow-hidden group" data-testid="card-project-cutter-lane">
+            <a href={`#${projects[1].anchor}`} className="relative h-[50vh] overflow-hidden group block" data-testid="card-project-cutter-lane">
               <img
                 src={img_cutter_kitchen4}
                 alt={projects[1].label}
@@ -293,20 +297,20 @@ export function LandingPage() {
                 <p className="font-body text-[9px] tracking-[0.25em] uppercase text-white/60 mb-0.5">{projects[1].type}</p>
                 <p className="font-serif-display text-[1.1rem] font-light text-white">{projects[1].label}</p>
               </div>
-            </div>
+            </a>
           </div>
 
           {/* Row 2: De Soto and Orchard equal */}
           <div className="grid grid-cols-2 gap-4">
             {[projects[2], projects[3]].map((p, i) => (
-              <div key={i} className="relative h-[40vh] overflow-hidden group" data-testid={`card-project-${i + 2}`}>
+              <a key={i} href={`#${p.anchor}`} className="relative h-[40vh] overflow-hidden group block" data-testid={`card-project-${i + 2}`}>
                 <img src={p.img} alt={p.label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
                 <div className="absolute inset-0 bg-gradient-to-t from-black/50 via-transparent to-transparent" />
                 <div className="absolute bottom-5 left-5">
                   <p className="font-body text-[9px] tracking-[0.25em] uppercase text-white/60 mb-0.5">{p.type}</p>
                   <p className="font-serif-display text-[1.1rem] font-light text-white">{p.label}</p>
                 </div>
-              </div>
+              </a>
             ))}
           </div>
         </div>
@@ -317,7 +321,7 @@ export function LandingPage() {
         <div className="max-w-6xl mx-auto space-y-0">
 
           {/* ── Oak Park Drive ── */}
-          <div className="border-t border-[#d8d1c7] pt-14 pb-16">
+          <div id="project-oak-park" className="border-t border-[#d8d1c7] pt-14 pb-16">
             <div className="mb-3 flex items-baseline gap-6">
               <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">San Francisco, CA</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Oak Park Drive</h3>
@@ -356,7 +360,7 @@ export function LandingPage() {
           </div>
 
           {/* ── Cutter Lane ── */}
-          <div className="border-t border-[#d8d1c7] pt-14 pb-16">
+          <div id="project-cutter-lane" className="border-t border-[#d8d1c7] pt-14 pb-16">
             <div className="mb-3 flex items-baseline gap-6">
               <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Park City, UT</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Cutter Lane</h3>
@@ -395,7 +399,7 @@ export function LandingPage() {
           </div>
 
           {/* ── De Soto Street ── */}
-          <div className="border-t border-[#d8d1c7] pt-14 pb-16">
+          <div id="project-de-soto" className="border-t border-[#d8d1c7] pt-14 pb-16">
             <div className="mb-3 flex items-baseline gap-6">
               <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Salt Lake City, UT</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">De Soto Street</h3>
@@ -443,7 +447,7 @@ export function LandingPage() {
           </div>
 
           {/* ── Orchard Avenue ── */}
-          <div className="border-t border-[#d8d1c7] pt-14 pb-4">
+          <div id="project-orchard" className="border-t border-[#d8d1c7] pt-14 pb-4">
             <div className="mb-3 flex items-baseline gap-6">
               <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Ogden, UT</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Orchard Avenue</h3>

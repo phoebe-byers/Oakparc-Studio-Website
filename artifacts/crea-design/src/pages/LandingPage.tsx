@@ -327,7 +327,7 @@ export function LandingPage() {
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Oak Park Drive</h3>
             </div>
             <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
-              A down-to-the-studs renovation of an original 1960s San Francisco home, blending structural improvements with thoughtful design — including a reworked layout, basement expansion, new systems throughout, and full finish and fixture selection.
+              A down-to-the-studs renovation of an original 1960s San Francisco home, blending structural improvements with thoughtful design — including a reworked layout, first floor expansion, new systems throughout, and full finish and fixture selection.
             </p>
             <div className="grid grid-cols-3 gap-2 mb-8">
               {[

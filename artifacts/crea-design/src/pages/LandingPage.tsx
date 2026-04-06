@@ -119,6 +119,28 @@ const projects = [
 export function LandingPage() {
   const [activeSlide, setActiveSlide] = useState(0);
   const [prevSlide, setPrevSlide] = useState<number | null>(null);
+  const [form, setForm] = useState({ name: "", email: "", message: "" });
+  const [formStatus, setFormStatus] = useState<"idle" | "submitting" | "success" | "error">("idle");
+
+  async function handleFormSubmit(e: React.FormEvent) {
+    e.preventDefault();
+    setFormStatus("submitting");
+    try {
+      const res = await fetch("https://formspree.io/f/xojprayw", {
+        method: "POST",
+        headers: { "Content-Type": "application/json", "Accept": "application/json" },
+        body: JSON.stringify(form),
+      });
+      if (res.ok) {
+        setFormStatus("success");
+        setForm({ name: "", email: "", message: "" });
+      } else {
+        setFormStatus("error");
+      }
+    } catch {
+      setFormStatus("error");
+    }
+  }
 
   useEffect(() => {
     const timer = setInterval(() => {
@@ -608,14 +630,57 @@ export function LandingPage() {
         <p className="font-body text-[13px] text-[#6b6053] font-light mb-12 max-w-lg mx-auto leading-relaxed">
           We take a limited number of projects each year to give every client and every home our complete attention. In-person and virtual design engagements welcome.
         </p>
-        <div className="flex items-center justify-center gap-8">
-          <a href="mailto:hello@oakparcstudio.com" data-testid="cta-begin" className="font-body text-[10px] tracking-[0.25em] uppercase bg-[#1c1a17] text-white px-10 py-4 hover:bg-[#2e2b27] transition-colors">
-            Begin a Conversation
-          </a>
-          <a href="#services" data-testid="cta-virtual" className="font-body text-[10px] tracking-[0.25em] uppercase text-[#9a8f7e] border border-[#d8d1c7] px-10 py-4 hover:border-[#9a8f7e] transition-colors">
-            Explore Virtual Design
-          </a>
-        </div>
+        {formStatus === "success" ? (
+          <div className="max-w-lg mx-auto py-10">
+            <p className="font-serif-display text-[1.3rem] font-light text-[#1c1a17] mb-3">Thank you.</p>
+            <p className="font-body text-[13px] text-[#6b6053] font-light leading-relaxed">We'll be in touch soon.</p>
+          </div>
+        ) : (
+          <form onSubmit={handleFormSubmit} className="max-w-lg mx-auto text-left mt-4">
+            <div className="mb-8">
+              <input
+                type="text"
+                placeholder="Name"
+                required
+                value={form.name}
+                onChange={e => setForm(f => ({ ...f, name: e.target.value }))}
+                className="w-full font-body text-[13px] text-[#1c1a17] placeholder-[#b0a898] bg-transparent border-b border-[#d8d1c7] pb-3 outline-none focus:border-[#9a8f7e] transition-colors"
+              />
+            </div>
+            <div className="mb-8">
+              <input
+                type="email"
+                placeholder="Email"
+                required
+                value={form.email}
+                onChange={e => setForm(f => ({ ...f, email: e.target.value }))}
+                className="w-full font-body text-[13px] text-[#1c1a17] placeholder-[#b0a898] bg-transparent border-b border-[#d8d1c7] pb-3 outline-none focus:border-[#9a8f7e] transition-colors"
+              />
+            </div>
+            <div className="mb-10">
+              <textarea
+                placeholder="Message"
+                required
+                rows={4}
+                value={form.message}
+                onChange={e => setForm(f => ({ ...f, message: e.target.value }))}
+                className="w-full font-body text-[13px] text-[#1c1a17] placeholder-[#b0a898] bg-transparent border-b border-[#d8d1c7] pb-3 outline-none focus:border-[#9a8f7e] transition-colors resize-none"
+              />
+            </div>
+            <div className="flex items-center justify-between">
+              <button
+                type="submit"
+                disabled={formStatus === "submitting"}
+                className="font-body text-[10px] tracking-[0.25em] uppercase bg-[#1c1a17] text-white px-10 py-4 hover:bg-[#2e2b27] transition-colors disabled:opacity-50"
+              >
+                {formStatus === "submitting" ? "Sending…" : "Send Message"}
+              </button>
+              {formStatus === "error" && (
+                <p className="font-body text-[11px] text-red-400">Something went wrong. Please try again.</p>
+              )}
+            </div>
+          </form>
+        )}
       </section>
 
       {/* ── About ── */}

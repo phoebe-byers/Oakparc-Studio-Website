@@ -2,6 +2,8 @@
 
 # compiled output
 dist
+!artifacts/crea-design/dist
+!artifacts/crea-design/dist/**
 tmp
 out-tsc
 *.tsbuildinfo

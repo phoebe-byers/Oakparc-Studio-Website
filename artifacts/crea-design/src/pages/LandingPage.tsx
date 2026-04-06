@@ -150,8 +150,8 @@ export function LandingPage() {
           <span className="w-8 h-px bg-white/60" />
         </div>
         <div className="flex items-center gap-10">
-          <a href="#about" data-testid="nav-studio" className="font-body text-[10px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">About</a>
-          <a href="#contact" data-testid="nav-start-project" className="font-body text-[10px] tracking-[0.25em] uppercase text-white border-b border-white pb-px hover:text-white/70 hover:border-white/70 transition-colors">
+          <a href="#about" data-testid="nav-studio" className="font-body text-[12px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">About</a>
+          <a href="#contact" data-testid="nav-start-project" className="font-body text-[12px] tracking-[0.25em] uppercase text-white border-b border-white pb-px hover:text-white/70 hover:border-white/70 transition-colors">
             Start a Project
           </a>
         </div>
@@ -195,11 +195,11 @@ export function LandingPage() {
             Oakparc Studio is a Park City–based design-build company creating thoughtfully reimagined homes — from first idea to final install — for clients nationwide.
           </p>
           <div className="flex flex-col gap-4">
-            <a href="#work" data-testid="hero-cta-work" className="font-body text-[10px] tracking-[0.25em] uppercase text-white flex items-center gap-3 group">
+            <a href="#work" data-testid="hero-cta-work" className="font-body text-[12px] tracking-[0.25em] uppercase text-white flex items-center gap-3 group">
               <span className="w-6 h-px bg-white group-hover:w-10 transition-all duration-300" />
               View Our Work
             </a>
-            <a href="#contact" data-testid="hero-cta-project" className="font-body text-[10px] tracking-[0.25em] uppercase text-white/55 flex items-center gap-3 group">
+            <a href="#contact" data-testid="hero-cta-project" className="font-body text-[12px] tracking-[0.25em] uppercase text-white/55 flex items-center gap-3 group">
               <span className="w-6 h-px bg-white/55 group-hover:w-10 transition-all duration-300" />
               Start a Project
             </a>
@@ -210,7 +210,7 @@ export function LandingPage() {
         <div className="absolute bottom-8 left-0 right-0 z-20 flex items-center justify-between px-14">
           <span
             key={activeSlide}
-            className="font-body text-[10px] tracking-[0.25em] uppercase text-white/60"
+            className="font-body text-[12px] tracking-[0.25em] uppercase text-white/60"
             style={{ animation: "fadeIn 0.6s ease" }}
           >
             {HERO_SLIDES[activeSlide].label}
@@ -244,7 +244,7 @@ export function LandingPage() {
       <section className="py-28 px-10">
         <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8 items-start">
           <div className="col-span-4">
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-0 mt-3">Our Ethos</p>
+            <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-0 mt-3">Our Ethos</p>
           </div>
           <div className="col-span-8">
             <p className="font-serif-display text-[clamp(1.6rem,2.5vw,2.4rem)] font-light leading-[1.4] text-[#1c1a17]" data-testid="ethos-text">
@@ -259,7 +259,7 @@ export function LandingPage() {
         <div className="max-w-6xl mx-auto">
           <div className="flex items-baseline justify-between mb-10">
             <h2 className="font-serif-display text-[clamp(1.4rem,2vw,2rem)] font-light text-[#1c1a17]">Selected Work</h2>
-            <a href="#work" data-testid="link-view-all" className="font-body text-[10px] tracking-[0.25em] uppercase text-[#9a8f7e] hover:text-[#1c1a17] transition-colors flex items-center gap-2">
+            <a href="#work" data-testid="link-view-all" className="font-body text-[12px] tracking-[0.25em] uppercase text-[#9a8f7e] hover:text-[#1c1a17] transition-colors flex items-center gap-2">
               <span>View All Projects</span>
               <span className="w-4 h-px bg-current" />
             </a>
@@ -491,7 +491,7 @@ export function LandingPage() {
       <section id="services" className="py-28 bg-[#f0ece5]">
         <div className="max-w-6xl mx-auto px-10">
           <div className="flex items-baseline justify-between mb-16">
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">What We Do</p>
+            <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e]">What We Do</p>
             <h2 className="font-serif-display text-[clamp(1.8rem,2.5vw,2.8rem)] font-light text-[#1c1a17]">Full-Service, Start to Finish</h2>
           </div>
           <div className="grid grid-cols-3 gap-12">
@@ -518,7 +518,7 @@ export function LandingPage() {
       <section className="py-0">
         <div className="flex items-stretch">
           <div className="w-1/2 bg-[#2a2520] flex flex-col justify-center px-16 py-24">
-            <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-8">Wherever You Are</p>
+            <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-8">Wherever You Are</p>
             <h2 className="font-serif-display text-[clamp(2rem,3vw,3.2rem)] font-light leading-[1.15] text-white mb-7">
               Full-service design,<br /><em>virtually delivered</em>
             </h2>
@@ -549,7 +549,7 @@ export function LandingPage() {
         <div className="max-w-6xl mx-auto">
           <div className="grid grid-cols-12 gap-8 mb-20">
             <div className="col-span-5">
-              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-6">How We Work</p>
+              <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-6">How We Work</p>
               <h2 className="font-serif-display text-[clamp(2rem,3vw,3rem)] font-light leading-tight text-[#1c1a17]">
                 Every home begins<br />with a conversation
               </h2>
@@ -597,7 +597,7 @@ export function LandingPage() {
 
       {/* ── CTA ── */}
       <section id="contact" className="py-32 px-10 bg-[#f9f7f4] text-center">
-        <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-8">Work With Us</p>
+        <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-8">Work With Us</p>
         <h2 className="font-serif-display text-[clamp(2.8rem,5vw,5rem)] font-light leading-[1.1] text-[#1c1a17] mb-8 max-w-3xl mx-auto">
           Ready to reimagine<br /><em>how you live?</em>
         </h2>
@@ -617,7 +617,7 @@ export function LandingPage() {
       {/* ── About ── */}
       <section id="about" className="py-28 px-10 bg-[#f0ece5]">
         <div className="max-w-6xl mx-auto">
-          <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-10">About the Studio</p>
+          <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-10">About the Studio</p>
           <div className="grid grid-cols-2 gap-16 items-start">
             {/* Photo */}
             <div className="relative overflow-hidden" style={{ height: "380px" }}>

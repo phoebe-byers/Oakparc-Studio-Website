@@ -133,6 +133,7 @@ export function LandingPage() {
 
   return (
     <div
+      data-v="3"
       style={{ fontFamily: "'Jost', sans-serif" }}
       className="min-h-screen bg-[#f9f7f4] text-[#1c1a17]"
     >

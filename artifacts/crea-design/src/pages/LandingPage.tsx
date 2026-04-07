@@ -218,7 +218,7 @@ export function LandingPage() {
             Homes,<br /><em>Completely</em><br />Reimagined
           </h1>
           <p className="font-body text-[16px] text-white font-light leading-relaxed mb-10 max-w-xs">
-            Oakparc Studio is a Park City–based design-build company creating thoughtfully reimagined homes — from first idea to final install — for clients nationwide.
+            Oakparc Studio is a Park City–based design-build company creating thoughtfully reimagined homes — primary residences and investment properties — from first idea to final install, for clients nationwide.
           </p>
           <div className="flex flex-col gap-4">
             <a href="#work" data-testid="hero-cta-work" className="font-body text-[12px] tracking-[0.25em] uppercase text-white flex items-center gap-3 group">
@@ -552,7 +552,7 @@ export function LandingPage() {
               Not every project requires on-site presence to be done exceptionally well. Our virtual design program delivers the same thoughtful process — spatial planning, material selection, sourcing, and detailed drawings — through a structured remote collaboration built for clients across the country.
             </p>
             <p className="font-body text-[13px] text-[#b0a08e] font-light leading-relaxed mb-10 max-w-md">
-              Ideal for primary renovations, vacation properties, and clients in markets we don't visit regularly. You get the same quality of thinking. We handle the rest.
+              Ideal for primary residences, investment properties, and vacation rentals — including clients in markets we don't visit regularly. You get the same quality of thinking. We handle the rest.
             </p>
             <a href="#contact" data-testid="link-virtual-design" className="font-body text-[12px] tracking-[0.25em] uppercase text-white flex items-center gap-3 group w-fit">
               <span className="w-6 h-px bg-white group-hover:w-10 transition-all duration-300" />
@@ -628,7 +628,7 @@ export function LandingPage() {
           Ready to reimagine<br /><em>how you live?</em>
         </h2>
         <p className="font-body text-[13px] text-[#6b6053] font-light mb-12 max-w-lg mx-auto leading-relaxed">
-          We take a limited number of projects each year to give every client and every home our complete attention. In-person and virtual design engagements welcome.
+          We take a limited number of projects each year to give every client and every home our complete attention — whether it's a primary residence, investment property, or vacation rental. In-person and virtual design engagements welcome.
         </p>
         {formStatus === "success" ? (
           <div className="max-w-lg mx-auto py-10">

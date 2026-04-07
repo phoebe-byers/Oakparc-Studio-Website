@@ -733,14 +733,6 @@ export function LandingPage() {
               <a key={link} href="#" data-testid={`footer-link-${link.toLowerCase().replace(" ", "-")}`} className="font-body text-[10px] tracking-[0.2em] uppercase text-white/30 hover:text-white/60 transition-colors">{link}</a>
             ))}
           </div>
-          <div>
-            <p className="font-body text-[10px] tracking-[0.2em] uppercase text-white/30 mb-4">Follow Along</p>
-            <div className="flex flex-col gap-2">
-              {["Instagram"].map(s => (
-                <a key={s} href="#" data-testid={`social-link-${s.toLowerCase()}`} className="font-body text-[10px] tracking-[0.15em] uppercase text-white/30 hover:text-white/60 transition-colors">{s}</a>
-              ))}
-            </div>
-          </div>
         </div>
         <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-white/5 flex items-center justify-between">
           <p className="font-body text-[10px] text-white/20 font-light">© 2026 Oakparc Studio. All rights reserved.</p>

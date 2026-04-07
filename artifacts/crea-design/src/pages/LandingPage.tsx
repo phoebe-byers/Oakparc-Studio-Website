@@ -427,7 +427,7 @@ export function LandingPage() {
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">De Soto Street</h3>
             </div>
             <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
-              A 1960s Salt Lake City investment property reimagined as a short-term rental, renovated for improved function, durability, and guest experience.
+              A 1960s Salt Lake City duplex with one unit reimagined as a short-term rental and the other retained as a long-term lease — renovated throughout for improved function, durability, and guest experience.
             </p>
             <div className="grid grid-cols-3 gap-3 mb-8">
               {/* Row 1 */}

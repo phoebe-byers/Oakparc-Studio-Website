@@ -274,7 +274,7 @@ export function LandingPage() {
           </div>
           <div className="col-span-8">
             <p className="font-serif-display text-[clamp(1.6rem,2.5vw,2.4rem)] font-light leading-[1.4] text-[#1c1a17]" data-testid="ethos-text">
-              We believe in taking what you have and making it work better for you. That means rethinking the layout, refining how each space flows, and finishing with a level of care that makes every room feel considered and intentional.
+              We believe in taking what you have and making it work better — for you, for your guests, or for whatever comes next. That means rethinking the layout, refining how each space flows, and finishing with a level of care that makes every room feel considered and intentional.
             </p>
           </div>
         </div>

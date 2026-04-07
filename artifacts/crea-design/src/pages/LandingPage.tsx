@@ -167,10 +167,10 @@ export function LandingPage() {
       {/* ── Nav ─────────────────────────────────────── */}
       <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-6">
         <div className="flex items-center gap-10">
-          <a href="#work" data-testid="nav-work" className="font-body text-[10px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Work</a>
-          <a href="#services" data-testid="nav-services" className="font-body text-[10px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Services</a>
+          <a href="#work" data-testid="nav-work" className="font-body text-[12px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Work</a>
+          <a href="#services" data-testid="nav-services" className="font-body text-[12px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Services</a>
         </div>
-        <div className="flex items-center gap-3" data-testid="brand-name">
+        <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3" data-testid="brand-name">
           <span className="w-8 h-px bg-white/60" />
           <span className="font-serif-display text-[22px] font-light tracking-widest text-white uppercase">Oakparc Studio</span>
           <span className="w-8 h-px bg-white/60" />
@@ -345,7 +345,7 @@ export function LandingPage() {
           {/* ── Oak Park Drive ── */}
           <div id="project-oak-park" className="border-t border-[#d8d1c7] pt-14 pb-16">
             <div className="mb-3 flex items-baseline gap-6">
-              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">San Francisco, CA</p>
+              <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e]">San Francisco, CA</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Oak Park Drive</h3>
             </div>
             <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
@@ -384,7 +384,7 @@ export function LandingPage() {
           {/* ── Cutter Lane ── */}
           <div id="project-cutter-lane" className="border-t border-[#d8d1c7] pt-14 pb-16">
             <div className="mb-3 flex items-baseline gap-6">
-              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Park City, UT</p>
+              <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e]">Park City, UT</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Cutter Lane</h3>
             </div>
             <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
@@ -423,7 +423,7 @@ export function LandingPage() {
           {/* ── De Soto Street ── */}
           <div id="project-de-soto" className="border-t border-[#d8d1c7] pt-14 pb-16">
             <div className="mb-3 flex items-baseline gap-6">
-              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Salt Lake City, UT</p>
+              <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e]">Salt Lake City, UT</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">De Soto Street</h3>
             </div>
             <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
@@ -471,7 +471,7 @@ export function LandingPage() {
           {/* ── Orchard Avenue ── */}
           <div id="project-orchard" className="border-t border-[#d8d1c7] pt-14 pb-4">
             <div className="mb-3 flex items-baseline gap-6">
-              <p className="font-body text-[10px] tracking-[0.3em] uppercase text-[#9a8f7e]">Ogden, UT</p>
+              <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e]">Ogden, UT</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Orchard Avenue</h3>
             </div>
             <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
@@ -523,7 +523,7 @@ export function LandingPage() {
           <div className="grid grid-cols-3 gap-12">
             {services.map((s, i) => (
               <div key={i} data-testid={`service-card-${i}`}>
-                <div className="font-body text-[10px] tracking-[0.25em] uppercase text-[#9a8f7e] mb-5">{s.label}</div>
+                <div className="font-body text-[12px] tracking-[0.25em] uppercase text-[#9a8f7e] mb-5">{s.label}</div>
                 <h3 className="font-serif-display text-[1.3rem] font-light leading-snug text-[#1c1a17] mb-4">{s.heading}</h3>
                 <p className="font-body text-[13px] text-[#6b6053] font-light leading-relaxed mb-6">{s.body}</p>
                 <ul className="space-y-2.5 border-t border-[#d8d1c7] pt-6">
@@ -554,7 +554,7 @@ export function LandingPage() {
             <p className="font-body text-[13px] text-[#b0a08e] font-light leading-relaxed mb-10 max-w-md">
               Ideal for primary renovations, vacation properties, and clients in markets we don't visit regularly. You get the same quality of thinking. We handle the rest.
             </p>
-            <a href="#contact" data-testid="link-virtual-design" className="font-body text-[10px] tracking-[0.25em] uppercase text-white flex items-center gap-3 group w-fit">
+            <a href="#contact" data-testid="link-virtual-design" className="font-body text-[12px] tracking-[0.25em] uppercase text-white flex items-center gap-3 group w-fit">
               <span className="w-6 h-px bg-white group-hover:w-10 transition-all duration-300" />
               Learn About Virtual Design
             </a>
@@ -594,7 +594,7 @@ export function LandingPage() {
               { step: "Installation", copy: "Full furnishing, art placement, styling, and the final reveal of your completely transformed home." },
             ].map((item, i) => (
               <div key={i} className="border-t border-[#d8d1c7] pt-8" data-testid={`process-step-${i}`}>
-                <div className="font-body text-[10px] tracking-[0.2em] uppercase text-[#9a8f7e] mb-4">0{i + 1}</div>
+                <div className="font-body text-[12px] tracking-[0.2em] uppercase text-[#9a8f7e] mb-4">0{i + 1}</div>
                 <h4 className="font-serif-display text-[1.1rem] font-light text-[#1c1a17] mb-3">{item.step}</h4>
                 <p className="font-body text-[12px] text-[#6b6053] font-light leading-relaxed">{item.copy}</p>
               </div>
@@ -671,12 +671,12 @@ export function LandingPage() {
               <button
                 type="submit"
                 disabled={formStatus === "submitting"}
-                className="font-body text-[10px] tracking-[0.25em] uppercase bg-[#1c1a17] text-white px-10 py-4 hover:bg-[#2e2b27] transition-colors disabled:opacity-50"
+                className="font-body text-[12px] tracking-[0.25em] uppercase bg-[#1c1a17] text-white px-10 py-4 hover:bg-[#2e2b27] transition-colors disabled:opacity-50"
               >
                 {formStatus === "submitting" ? "Sending…" : "Send Message"}
               </button>
               {formStatus === "error" && (
-                <p className="font-body text-[11px] text-red-400">Something went wrong. Please try again.</p>
+                <p className="font-body text-[12px] text-red-400">Something went wrong. Please try again.</p>
               )}
             </div>
           </form>
@@ -706,7 +706,7 @@ export function LandingPage() {
                     { label: "Contact",  value: "phoebe@oakparcstudio.com" },
                   ].map(({ label, value }) => (
                     <div key={label} className="flex gap-8">
-                      <dt className="font-body text-[10px] tracking-[0.2em] uppercase text-[#9a8f7e] w-20 flex-shrink-0 pt-px">{label}</dt>
+                      <dt className="font-body text-[12px] tracking-[0.2em] uppercase text-[#9a8f7e] w-20 flex-shrink-0 pt-px">{label}</dt>
                       <dd className="font-body text-[12px] text-[#5a5047] font-light leading-relaxed">{value}</dd>
                     </div>
                   ))}
@@ -726,16 +726,16 @@ export function LandingPage() {
               <p className="font-serif-display text-[18px] font-light tracking-widest text-white uppercase">Oakparc Studio</p>
               <span className="w-6 h-px bg-white/50" />
             </div>
-            <p className="font-body text-[11px] text-white/30 font-light">Serving Clients Nationwide</p>
+            <p className="font-body text-[12px] text-white/30 font-light">Serving Clients Nationwide</p>
           </div>
           <div className="grid grid-cols-2 gap-x-16 gap-y-3">
             {["Work", "Services", "Virtual Design", "About", "Contact"].map(link => (
-              <a key={link} href="#" data-testid={`footer-link-${link.toLowerCase().replace(" ", "-")}`} className="font-body text-[10px] tracking-[0.2em] uppercase text-white/30 hover:text-white/60 transition-colors">{link}</a>
+              <a key={link} href="#" data-testid={`footer-link-${link.toLowerCase().replace(" ", "-")}`} className="font-body text-[12px] tracking-[0.2em] uppercase text-white/30 hover:text-white/60 transition-colors">{link}</a>
             ))}
           </div>
         </div>
         <div className="max-w-6xl mx-auto mt-12 pt-8 border-t border-white/5 flex items-center justify-between">
-          <p className="font-body text-[10px] text-white/20 font-light">© 2026 Oakparc Studio. All rights reserved.</p>
+          <p className="font-body text-[12px] text-white/20 font-light">© 2026 Oakparc Studio. All rights reserved.</p>
         </div>
       </footer>
     </div>

@@ -588,10 +588,10 @@ export function LandingPage() {
           </div>
           <div className="grid grid-cols-4 gap-8">
             {[
-              { step: "Discovery", copy: "We learn how you live, what isn't working, and where the home's real potential is hiding." },
+              { step: "Discovery", copy: "We learn how you live — or how you want guests to experience the space — what isn't working, and where the home's real potential is hiding." },
               { step: "Design", copy: "Space planning, architecture, material palettes, and every detail of the design narrative." },
               { step: "Execution", copy: "Construction coordination, contractor management, and on-site oversight from start to finish." },
-              { step: "Installation", copy: "Full furnishing, art placement, styling, and the final reveal of your completely transformed home." },
+              { step: "Installation", copy: "Full furnishing, art placement, styling, and the final reveal of a home you love — or a rental that stands apart." },
             ].map((item, i) => (
               <div key={i} className="border-t border-[#d8d1c7] pt-8" data-testid={`process-step-${i}`}>
                 <div className="font-body text-[12px] tracking-[0.2em] uppercase text-[#9a8f7e] mb-4">0{i + 1}</div>

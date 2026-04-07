@@ -475,7 +475,7 @@ export function LandingPage() {
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Orchard Avenue</h3>
             </div>
             <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
-              A 1950s Ogden investment property reimagined as a short-term rental, with structural and cosmetic updates to improve livability and long-term durability.
+              A 1950s Ogden fourplex with one unit reimagined as a short-term rental and three retained as long-term leases — updated throughout for improved livability, durability, and guest experience.
             </p>
             <div className="mb-8">
               <div className="grid grid-cols-3 gap-3 mb-3">

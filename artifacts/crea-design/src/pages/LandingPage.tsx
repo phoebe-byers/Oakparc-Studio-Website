@@ -64,19 +64,19 @@ const services = [
   {
     label: "01",
     heading: "Design That Reworks How You Live",
-    body: "We start from scratch on how your home actually functions — reimagining layout, flow, and spatial planning to unlock the full potential of every square foot.",
+    body: "We start from scratch on how your home actually functions — reimagining layout, flow, and spatial planning to unlock the full potential of every square foot, whether it's a primary home or an investment property.",
     items: ["Layout, flow, and spatial planning", "Structural and cosmetic renovations", "Kitchens, bathrooms, and full-home transformations"],
   },
   {
     label: "02",
     heading: "Execution That Upgrades the Asset",
     body: "Our team coordinates every trade and detail from foundation to finish — so the home that comes out the other side is more valuable in every sense of the word.",
-    items: ["Systems, infrastructure, and construction coordination", "Finish and fixture selection across the entire project", "Indoor–outdoor living expansion"],
+    items: ["Systems, infrastructure, and construction coordination", "Finish and fixture selection across the entire project", "Indoor–outdoor living expansion", "Short-term and long-term rental optimization"],
   },
   {
     label: "03",
     heading: "Spaces That Are Fully Realized",
-    body: "We don't stop at construction. Every project ends with furnishing, styling, and the final layering that turns a beautiful house into a home you actually love living in.",
+    body: "We don't stop at construction. Every project ends with furnishing, styling, and the final layering that turns a beautiful house into a home you love living in — or a space your guests can't stop talking about.",
     items: ["Furnishing and styling", "Thoughtfully designed, fully finished spaces", "Lifestyle-driven environments built around how you actually live"],
   },
 ];

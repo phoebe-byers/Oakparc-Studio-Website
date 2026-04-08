@@ -714,7 +714,7 @@ export function LandingPage() {
                   {[
                     { label: "Location", value: "Park City, UT — Serving Clients Nationwide" },
                     { label: "Services", value: "Full-Service Design · Virtual Design · Renovation Management" },
-                    { label: "Contact",  value: "phoebe@oakparcstudio.com" },
+                    { label: "Contact",  value: "hello@oakparcstudio.com" },
                   ].map(({ label, value }) => (
                     <div key={label} className="flex gap-6 md:gap-8">
                       <dt className="font-body text-[12px] tracking-[0.2em] uppercase text-[#9a8f7e] w-20 flex-shrink-0 pt-px">{label}</dt>

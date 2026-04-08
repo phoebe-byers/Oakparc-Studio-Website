@@ -154,7 +154,7 @@ export function LandingPage() {
 
   return (
     <div
-      data-v="3"
+      data-v="4"
       style={{ fontFamily: "'Jost', sans-serif" }}
       className="min-h-screen bg-[#f9f7f4] text-[#1c1a17]"
     >
@@ -165,21 +165,31 @@ export function LandingPage() {
       `}</style>
 
       {/* ── Nav ─────────────────────────────────────── */}
-      <nav className="absolute top-0 left-0 right-0 z-50 flex items-center justify-between px-10 py-6">
-        <div className="flex items-center gap-10">
-          <a href="#work" data-testid="nav-work" className="font-body text-[12px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Work</a>
-          <a href="#services" data-testid="nav-services" className="font-body text-[12px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Services</a>
-        </div>
-        <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3" data-testid="brand-name">
-          <span className="w-8 h-px bg-white/60" />
-          <span className="font-serif-display text-[22px] font-light tracking-widest text-white uppercase">Oakparc Studio</span>
-          <span className="w-8 h-px bg-white/60" />
-        </div>
-        <div className="flex items-center gap-10">
-          <a href="#about" data-testid="nav-studio" className="font-body text-[12px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">About</a>
-          <a href="#contact" data-testid="nav-start-project" className="font-body text-[12px] tracking-[0.25em] uppercase text-white border-b border-white pb-px hover:text-white/70 hover:border-white/70 transition-colors">
+      <nav className="absolute top-0 left-0 right-0 z-50 px-6 md:px-10 py-5 md:py-6">
+        {/* Mobile layout */}
+        <div className="flex md:hidden items-center justify-between">
+          <span className="font-serif-display text-[15px] font-light tracking-[0.2em] text-white uppercase whitespace-nowrap" data-testid="brand-name">Oakparc Studio</span>
+          <a href="#contact" data-testid="nav-start-project" className="font-body text-[11px] tracking-[0.2em] uppercase text-white border-b border-white pb-px">
             Start a Project
           </a>
+        </div>
+        {/* Desktop layout */}
+        <div className="hidden md:flex items-center justify-between relative">
+          <div className="flex items-center gap-10">
+            <a href="#work" data-testid="nav-work" className="font-body text-[12px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Work</a>
+            <a href="#services" data-testid="nav-services" className="font-body text-[12px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">Services</a>
+          </div>
+          <div className="absolute left-1/2 -translate-x-1/2 flex items-center gap-3">
+            <span className="w-8 h-px bg-white/60" />
+            <span className="font-serif-display text-[22px] font-light tracking-widest text-white uppercase">Oakparc Studio</span>
+            <span className="w-8 h-px bg-white/60" />
+          </div>
+          <div className="flex items-center gap-10">
+            <a href="#about" data-testid="nav-studio" className="font-body text-[12px] tracking-[0.25em] uppercase text-white hover:text-white/70 transition-colors">About</a>
+            <a href="#contact" className="font-body text-[12px] tracking-[0.25em] uppercase text-white border-b border-white pb-px hover:text-white/70 hover:border-white/70 transition-colors">
+              Start a Project
+            </a>
+          </div>
         </div>
       </nav>
 
@@ -204,20 +214,23 @@ export function LandingPage() {
           />
         ))}
 
-        {/* Left dark gradient — always on top of images */}
-        <div className="absolute inset-0 z-10"
+        {/* Desktop: left-heavy dark gradient */}
+        <div className="absolute inset-0 z-10 hidden md:block"
           style={{
             background: "linear-gradient(to right, rgba(0,0,0,0.80) 0%, rgba(0,0,0,0.50) 28%, rgba(0,0,0,0.12) 52%, rgba(0,0,0,0.04) 68%, rgba(0,0,0,0.08) 100%)"
           }}
         />
+        {/* Mobile: full overlay so text is readable over full width */}
+        <div className="absolute inset-0 z-10 bg-black/55 md:hidden" />
+        {/* Shared top/bottom vignette */}
         <div className="absolute inset-0 z-10 bg-gradient-to-b from-black/25 via-transparent to-black/20" />
 
-        {/* Hero text */}
-        <div className="absolute inset-y-0 left-0 w-[38%] flex flex-col justify-center px-14 py-20 z-20">
-          <h1 className="font-serif-display text-[clamp(3.8rem,5.5vw,6.5rem)] font-medium leading-[1.04] text-white mb-8" data-testid="hero-heading">
+        {/* Hero text — full width on mobile, 38% on desktop */}
+        <div className="absolute inset-y-0 left-0 w-full md:w-[38%] flex flex-col justify-center px-6 md:px-14 py-20 z-20">
+          <h1 className="font-serif-display text-[clamp(2.8rem,5.5vw,6.5rem)] font-medium leading-[1.04] text-white mb-6 md:mb-8" data-testid="hero-heading">
             Homes,<br /><em>Completely</em><br />Reimagined
           </h1>
-          <p className="font-body text-[16px] text-white font-light leading-relaxed mb-10 max-w-xs">
+          <p className="font-body text-[15px] md:text-[16px] text-white font-light leading-relaxed mb-8 md:mb-10 max-w-xs">
             Oakparc Studio is a Park City–based design-build company creating thoughtfully reimagined homes — primary residences and investment properties — from first idea to final install, for clients nationwide.
           </p>
           <div className="flex flex-col gap-4">
@@ -233,7 +246,7 @@ export function LandingPage() {
         </div>
 
         {/* Bottom bar: project label + dots */}
-        <div className="absolute bottom-8 left-0 right-0 z-20 flex items-center justify-between px-14">
+        <div className="absolute bottom-6 md:bottom-8 left-0 right-0 z-20 flex items-center justify-between px-6 md:px-14">
           <span
             key={activeSlide}
             className="font-body text-[12px] tracking-[0.25em] uppercase text-white/60"
@@ -267,13 +280,13 @@ export function LandingPage() {
       </section>
 
       {/* ── Studio Statement ── */}
-      <section className="py-28 px-10">
-        <div className="max-w-6xl mx-auto grid grid-cols-12 gap-8 items-start">
-          <div className="col-span-4">
-            <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-0 mt-3">Our Ethos</p>
+      <section className="py-16 md:py-28 px-6 md:px-10">
+        <div className="max-w-6xl mx-auto grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 items-start">
+          <div className="md:col-span-4">
+            <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-2 md:mb-0 md:mt-3">Our Ethos</p>
           </div>
-          <div className="col-span-8">
-            <p className="font-serif-display text-[clamp(1.6rem,2.5vw,2.4rem)] font-light leading-[1.4] text-[#1c1a17]" data-testid="ethos-text">
+          <div className="md:col-span-8">
+            <p className="font-serif-display text-[clamp(1.4rem,2.5vw,2.4rem)] font-light leading-[1.4] text-[#1c1a17]" data-testid="ethos-text">
               We believe in taking what you have and making it work better — for you, for your guests, or for whatever comes next. That means rethinking the layout, refining how each space flows, and finishing with a level of care that makes every room feel considered and intentional.
             </p>
           </div>
@@ -281,20 +294,19 @@ export function LandingPage() {
       </section>
 
       {/* ── Featured Projects ── */}
-      <section id="work" className="px-10 pb-24">
+      <section id="work" className="px-6 md:px-10 pb-16 md:pb-24">
         <div className="max-w-6xl mx-auto">
-          <div className="flex items-baseline justify-between mb-10">
+          <div className="flex items-baseline justify-between mb-8 md:mb-10">
             <h2 className="font-serif-display text-[clamp(1.4rem,2vw,2rem)] font-light text-[#1c1a17]">Selected Work</h2>
             <a href="#work" data-testid="link-view-all" className="font-body text-[12px] tracking-[0.25em] uppercase text-[#9a8f7e] hover:text-[#1c1a17] transition-colors flex items-center gap-2">
-              <span>View All Projects</span>
+              <span>View All</span>
               <span className="w-4 h-px bg-current" />
             </a>
           </div>
 
-          {/* Row 1: Oak Park Drive + Cutter Lane — equal */}
-          <div className="grid grid-cols-2 gap-4 mb-4">
-            {/* Oak Park Drive */}
-            <a href={`#${projects[0].anchor}`} className="relative h-[50vh] overflow-hidden group block" data-testid="card-project-oak-park">
+          {/* Row 1: Oak Park Drive + Cutter Lane */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4 mb-4">
+            <a href={`#${projects[0].anchor}`} className="relative h-[45vh] md:h-[50vh] overflow-hidden group block" data-testid="card-project-oak-park">
               <img
                 src={img_oakpark_fireplace}
                 alt={projects[0].label}
@@ -307,8 +319,7 @@ export function LandingPage() {
               </div>
             </a>
 
-            {/* Cutter Lane */}
-            <a href={`#${projects[1].anchor}`} className="relative h-[50vh] overflow-hidden group block" data-testid="card-project-cutter-lane">
+            <a href={`#${projects[1].anchor}`} className="relative h-[45vh] md:h-[50vh] overflow-hidden group block" data-testid="card-project-cutter-lane">
               <img
                 src={img_cutter_kitchen4}
                 alt={projects[1].label}
@@ -322,8 +333,8 @@ export function LandingPage() {
             </a>
           </div>
 
-          {/* Row 2: De Soto and Orchard equal */}
-          <div className="grid grid-cols-2 gap-4">
+          {/* Row 2: De Soto and Orchard */}
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
             {[projects[2], projects[3]].map((p, i) => (
               <a key={i} href={`#${p.anchor}`} className="relative h-[40vh] overflow-hidden group block" data-testid={`card-project-${i + 2}`}>
                 <img src={p.img} alt={p.label} className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-[1.03]" />
@@ -339,19 +350,19 @@ export function LandingPage() {
       </section>
 
       {/* ── Project Detail Sections ── */}
-      <section className="px-10 pb-24">
+      <section className="px-6 md:px-10 pb-16 md:pb-24">
         <div className="max-w-6xl mx-auto space-y-0">
 
           {/* ── Oak Park Drive ── */}
-          <div id="project-oak-park" className="border-t border-[#d8d1c7] pt-14 pb-16">
-            <div className="mb-3 flex items-baseline gap-6">
+          <div id="project-oak-park" className="border-t border-[#d8d1c7] pt-12 md:pt-14 pb-14 md:pb-16">
+            <div className="mb-3 flex flex-wrap items-baseline gap-3 md:gap-6">
               <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e]">San Francisco, CA</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Oak Park Drive</h3>
             </div>
             <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
               A down-to-the-studs renovation of an original 1960s San Francisco home, blending structural improvements with thoughtful design — including a reworked layout, a first floor expansion conceived as a short-term rental suite, new systems throughout, and full finish and fixture selection.
             </p>
-            <div className="grid grid-cols-3 gap-2 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-8">
               {[
                 { src: img_oakpark_living,       alt: "Oak Park Drive open plan living" },
                 { src: img_oakpark_fireplace,    alt: "Oak Park Drive living room fireplace" },
@@ -371,7 +382,7 @@ export function LandingPage() {
                 </div>
               ))}
             </div>
-            <ul className="grid grid-cols-3 gap-x-10 gap-y-3">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-3">
               {["Reworked layout with structural wall modifications", "New electrical, plumbing, and windows throughout", "Basement expansion with bedroom, bathroom, and kitchenette", "Added exterior patio for indoor-outdoor living", "New systems throughout", "Full selection of finishes and fixtures"].map((item, i) => (
                 <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
                   <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
@@ -382,15 +393,15 @@ export function LandingPage() {
           </div>
 
           {/* ── Cutter Lane ── */}
-          <div id="project-cutter-lane" className="border-t border-[#d8d1c7] pt-14 pb-16">
-            <div className="mb-3 flex items-baseline gap-6">
+          <div id="project-cutter-lane" className="border-t border-[#d8d1c7] pt-12 md:pt-14 pb-14 md:pb-16">
+            <div className="mb-3 flex flex-wrap items-baseline gap-3 md:gap-6">
               <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e]">Park City, UT</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Cutter Lane</h3>
             </div>
             <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
               A complete renovation of a 1990s Park City home — cosmetic updates with light structural work — designed to refresh the space and improve everyday flow.
             </p>
-            <div className="grid grid-cols-3 gap-2 mb-8">
+            <div className="grid grid-cols-2 md:grid-cols-3 gap-2 mb-8">
               {[
                 { src: img_hero,           alt: "Cutter Lane entry staircase" },
                 { src: img_cutter_kitchen4,alt: "Cutter Lane kitchen and dining overview" },
@@ -410,7 +421,7 @@ export function LandingPage() {
                 </div>
               ))}
             </div>
-            <ul className="grid grid-cols-3 gap-x-10 gap-y-3">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-3">
               {["Minor layout adjustments with limited structural changes", "Reworked kitchen layout for better functionality", "Updated bathrooms with new finishes and fixtures", "Added exterior deck and playhouse for expanded outdoor living", "New systems throughout", "Full selection of finishes and fixtures throughout"].map((item, i) => (
                 <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
                   <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
@@ -421,17 +432,17 @@ export function LandingPage() {
           </div>
 
           {/* ── De Soto Street ── */}
-          <div id="project-de-soto" className="border-t border-[#d8d1c7] pt-14 pb-16">
-            <div className="mb-3 flex items-baseline gap-6">
+          <div id="project-de-soto" className="border-t border-[#d8d1c7] pt-12 md:pt-14 pb-14 md:pb-16">
+            <div className="mb-3 flex flex-wrap items-baseline gap-3 md:gap-6">
               <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e]">Salt Lake City, UT</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">De Soto Street</h3>
             </div>
             <p className="font-serif-display text-[1.05rem] font-light leading-[1.65] text-[#5a5047] mb-8 max-w-2xl">
               A 1960s Salt Lake City duplex with one unit reimagined as a short-term rental and the other retained as a long-term lease — renovated throughout for improved function, durability, and guest experience.
             </p>
-            <div className="grid grid-cols-3 gap-3 mb-8">
+            <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-8">
               {/* Row 1 */}
-              <div className="col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
+              <div className="col-span-1 md:col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
                 <img src={img_desoto_living} alt="De Soto living room" className="w-full h-full object-cover" />
               </div>
               <div className="relative overflow-hidden" style={{ height: "38vh" }}>
@@ -458,7 +469,7 @@ export function LandingPage() {
                 <img src={img_desoto_vanity} alt="De Soto bathroom vanity" className="w-full h-full object-cover" />
               </div>
             </div>
-            <ul className="grid grid-cols-3 gap-x-10 gap-y-3">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-3">
               {["Full cosmetic renovation across both units", "Updated kitchens and bathrooms", "New systems throughout", "Full selection of finishes and fixtures", "Designed with STR guests in mind"].map((item, i) => (
                 <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
                   <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
@@ -469,8 +480,8 @@ export function LandingPage() {
           </div>
 
           {/* ── Orchard Avenue ── */}
-          <div id="project-orchard" className="border-t border-[#d8d1c7] pt-14 pb-4">
-            <div className="mb-3 flex items-baseline gap-6">
+          <div id="project-orchard" className="border-t border-[#d8d1c7] pt-12 md:pt-14 pb-4">
+            <div className="mb-3 flex flex-wrap items-baseline gap-3 md:gap-6">
               <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e]">Ogden, UT</p>
               <h3 className="font-serif-display text-[1.4rem] font-light text-[#1c1a17]">Orchard Avenue</h3>
             </div>
@@ -478,8 +489,8 @@ export function LandingPage() {
               A 1950s Ogden fourplex with one unit reimagined as a short-term rental and three retained as long-term leases — updated throughout for improved livability, durability, and guest experience.
             </p>
             <div className="mb-8">
-              <div className="grid grid-cols-3 gap-3 mb-3">
-                <div className="col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 mb-3">
+                <div className="col-span-1 md:col-span-2 relative overflow-hidden" style={{ height: "38vh" }}>
                   <img src={img_orchard_kitchen} alt="Orchard Avenue kitchen" className="w-full h-full object-cover" />
                 </div>
                 <div className="grid grid-rows-2 gap-3" style={{ height: "38vh" }}>
@@ -491,7 +502,7 @@ export function LandingPage() {
                   </div>
                 </div>
               </div>
-              <div className="grid grid-cols-2 gap-3">
+              <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
                 <div className="relative overflow-hidden" style={{ height: "30vh" }}>
                   <img src={img_orchard_living} alt="Orchard Avenue living room" className="w-full h-full object-cover" />
                 </div>
@@ -500,7 +511,7 @@ export function LandingPage() {
                 </div>
               </div>
             </div>
-            <ul className="grid grid-cols-3 gap-x-10 gap-y-3">
+            <ul className="grid grid-cols-1 md:grid-cols-3 gap-x-10 gap-y-3">
               {["Layout improvements to enhance flow and function", "Updated electrical, plumbing, and core systems", "Renovated kitchens and bathrooms throughout", "New systems throughout", "Full selection of finishes and fixtures", "Designed with STR guests in mind"].map((item, i) => (
                 <li key={i} className="font-body text-[12px] text-[#6b6053] font-light flex items-start gap-2.5">
                   <span className="mt-[7px] w-3 h-px bg-[#b0a599] flex-shrink-0" />
@@ -514,13 +525,13 @@ export function LandingPage() {
       </section>
 
       {/* ── Services ── */}
-      <section id="services" className="py-28 bg-[#f0ece5]">
-        <div className="max-w-6xl mx-auto px-10">
-          <div className="flex items-baseline justify-between mb-16">
+      <section id="services" className="py-16 md:py-28 bg-[#f0ece5]">
+        <div className="max-w-6xl mx-auto px-6 md:px-10">
+          <div className="flex flex-col md:flex-row md:items-baseline md:justify-between mb-10 md:mb-16 gap-3">
             <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e]">What We Do</p>
-            <h2 className="font-serif-display text-[clamp(1.8rem,2.5vw,2.8rem)] font-light text-[#1c1a17]">Full-Service, Start to Finish</h2>
+            <h2 className="font-serif-display text-[clamp(1.6rem,2.5vw,2.8rem)] font-light text-[#1c1a17]">Full-Service, Start to Finish</h2>
           </div>
-          <div className="grid grid-cols-3 gap-12">
+          <div className="grid grid-cols-1 md:grid-cols-3 gap-10 md:gap-12">
             {services.map((s, i) => (
               <div key={i} data-testid={`service-card-${i}`}>
                 <div className="font-body text-[12px] tracking-[0.25em] uppercase text-[#9a8f7e] mb-5">{s.label}</div>
@@ -542,10 +553,10 @@ export function LandingPage() {
 
       {/* ── Virtual Design ── */}
       <section className="py-0">
-        <div className="flex items-stretch">
-          <div className="w-1/2 bg-[#2a2520] flex flex-col justify-center px-16 py-24">
+        <div className="flex flex-col md:flex-row md:items-stretch">
+          <div className="w-full md:w-1/2 bg-[#2a2520] flex flex-col justify-center px-8 md:px-16 py-16 md:py-24">
             <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-8">Wherever You Are</p>
-            <h2 className="font-serif-display text-[clamp(2rem,3vw,3.2rem)] font-light leading-[1.15] text-white mb-7">
+            <h2 className="font-serif-display text-[clamp(1.8rem,3vw,3.2rem)] font-light leading-[1.15] text-white mb-7">
               Full-service design,<br /><em>virtually delivered</em>
             </h2>
             <p className="font-body text-[13px] text-[#b0a08e] font-light leading-relaxed mb-5 max-w-md">
@@ -559,7 +570,7 @@ export function LandingPage() {
               Learn About Virtual Design
             </a>
           </div>
-          <div className="w-1/2 relative overflow-hidden" style={{ minHeight: "520px" }}>
+          <div className="w-full md:w-1/2 relative overflow-hidden min-h-[320px] md:min-h-[520px]">
             <img
               src={img_virtual_design}
               alt="Oak Park Drive wet bar and entry"
@@ -571,29 +582,29 @@ export function LandingPage() {
       </section>
 
       {/* ── Process ── */}
-      <section className="py-28 px-10">
+      <section className="py-16 md:py-28 px-6 md:px-10">
         <div className="max-w-6xl mx-auto">
-          <div className="grid grid-cols-12 gap-8 mb-20">
-            <div className="col-span-5">
+          <div className="grid grid-cols-1 md:grid-cols-12 gap-6 md:gap-8 mb-12 md:mb-20">
+            <div className="md:col-span-5">
               <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-6">How We Work</p>
-              <h2 className="font-serif-display text-[clamp(2rem,3vw,3rem)] font-light leading-tight text-[#1c1a17]">
+              <h2 className="font-serif-display text-[clamp(1.8rem,3vw,3rem)] font-light leading-tight text-[#1c1a17]">
                 Every home begins<br />with a conversation
               </h2>
             </div>
-            <div className="col-span-6 col-start-7 flex items-end">
+            <div className="md:col-span-6 md:col-start-7 flex items-end">
               <p className="font-body text-[13px] text-[#6b6053] font-light leading-relaxed">
                 We keep our client roster intentionally small. That's not a limitation — it's a commitment. It means the people leading your project are the people who designed it, from the first call to the final walkthrough.
               </p>
             </div>
           </div>
-          <div className="grid grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 md:gap-8">
             {[
               { step: "Discovery", copy: "We learn how you live — or how you want guests to experience the space — what isn't working, and where the home's real potential is hiding." },
               { step: "Design", copy: "Space planning, architecture, material palettes, and every detail of the design narrative." },
               { step: "Execution", copy: "Construction coordination, contractor management, and on-site oversight from start to finish." },
               { step: "Installation", copy: "Full furnishing, art placement, styling, and the final reveal of a home you love — or a rental that stands apart." },
             ].map((item, i) => (
-              <div key={i} className="border-t border-[#d8d1c7] pt-8" data-testid={`process-step-${i}`}>
+              <div key={i} className="border-t border-[#d8d1c7] pt-6 md:pt-8" data-testid={`process-step-${i}`}>
                 <div className="font-body text-[12px] tracking-[0.2em] uppercase text-[#9a8f7e] mb-4">0{i + 1}</div>
                 <h4 className="font-serif-display text-[1.1rem] font-light text-[#1c1a17] mb-3">{item.step}</h4>
                 <p className="font-body text-[12px] text-[#6b6053] font-light leading-relaxed">{item.copy}</p>
@@ -604,16 +615,16 @@ export function LandingPage() {
       </section>
 
       {/* ── Pull quote ── */}
-      <section className="relative h-[55vh] overflow-hidden">
+      <section className="relative h-[50vh] md:h-[55vh] overflow-hidden">
         <img
           src={img_pull_quote}
           alt="Oak Park Drive living room with fireplace"
           className="w-full h-full object-cover object-center"
         />
         <div className="absolute inset-0 bg-[#1c1a17]/60" />
-        <div className="absolute inset-0 flex items-center justify-center text-center px-10">
+        <div className="absolute inset-0 flex items-center justify-center text-center px-6 md:px-10">
           <div>
-            <p className="font-serif-display text-[clamp(1.8rem,3.5vw,3.5rem)] font-light italic text-white leading-[1.2] max-w-3xl" data-testid="pull-quote">
+            <p className="font-serif-display text-[clamp(1.5rem,3.5vw,3.5rem)] font-light italic text-white leading-[1.2] max-w-3xl" data-testid="pull-quote">
               "We don't just renovate homes.<br />We reimagine how you live inside them."
             </p>
             <div className="mt-8 w-8 h-px bg-white/40 mx-auto" />
@@ -622,9 +633,9 @@ export function LandingPage() {
       </section>
 
       {/* ── CTA ── */}
-      <section id="contact" className="py-32 px-10 bg-[#f9f7f4] text-center">
+      <section id="contact" className="py-20 md:py-32 px-6 md:px-10 bg-[#f9f7f4] text-center">
         <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-8">Work With Us</p>
-        <h2 className="font-serif-display text-[clamp(2.8rem,5vw,5rem)] font-light leading-[1.1] text-[#1c1a17] mb-8 max-w-3xl mx-auto">
+        <h2 className="font-serif-display text-[clamp(2.4rem,5vw,5rem)] font-light leading-[1.1] text-[#1c1a17] mb-8 max-w-3xl mx-auto">
           Ready to reimagine<br /><em>how you live?</em>
         </h2>
         <p className="font-body text-[13px] text-[#6b6053] font-light mb-12 max-w-lg mx-auto leading-relaxed">
@@ -684,12 +695,12 @@ export function LandingPage() {
       </section>
 
       {/* ── About ── */}
-      <section id="about" className="py-28 px-10 bg-[#f0ece5]">
+      <section id="about" className="py-16 md:py-28 px-6 md:px-10 bg-[#f0ece5]">
         <div className="max-w-6xl mx-auto">
           <p className="font-body text-[12px] tracking-[0.3em] uppercase text-[#9a8f7e] mb-10">About the Studio</p>
           <div className="max-w-2xl">
             <div className="pt-4">
-              <h2 className="font-serif-display text-[clamp(2rem,3vw,3rem)] font-light leading-[1.15] text-[#1c1a17] mb-8">
+              <h2 className="font-serif-display text-[clamp(1.8rem,3vw,3rem)] font-light leading-[1.15] text-[#1c1a17] mb-8">
                 Design built around<br /><em>the way you live.</em>
               </h2>
               <p className="font-body text-[13px] text-[#6b6053] font-light leading-relaxed mb-5">
@@ -705,7 +716,7 @@ export function LandingPage() {
                     { label: "Services", value: "Full-Service Design · Virtual Design · Renovation Management" },
                     { label: "Contact",  value: "phoebe@oakparcstudio.com" },
                   ].map(({ label, value }) => (
-                    <div key={label} className="flex gap-8">
+                    <div key={label} className="flex gap-6 md:gap-8">
                       <dt className="font-body text-[12px] tracking-[0.2em] uppercase text-[#9a8f7e] w-20 flex-shrink-0 pt-px">{label}</dt>
                       <dd className="font-body text-[12px] text-[#5a5047] font-light leading-relaxed">{value}</dd>
                     </div>
@@ -718,7 +729,7 @@ export function LandingPage() {
       </section>
 
       {/* ── Footer ── */}
-      <footer className="py-14 px-10 bg-[#1c1a17]">
+      <footer className="py-12 px-6 md:px-10 bg-[#1c1a17]">
         <div className="max-w-6xl mx-auto flex flex-wrap items-start justify-between gap-10">
           <div>
             <div className="flex items-center gap-3 mb-2">
